@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI Center of Excellence - Org Chart</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .org-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .level {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        .box {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin: 10px;
+            width: 280px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .box h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        .box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .box .title {
+            font-weight: bold;
+            color: #3498db;
+        }
+        .box .dept {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        .box .responsibilities {
+            background: #f8f9fa;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .box .responsibilities ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .box .responsibilities li {
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        .connector {
+            width: 2px;
+            height: 20px;
+            background: #3498db;
+            margin: 0 auto;
+        }
+        .leader {
+            border-left: 3px solid #e74c3c;
+        }
+        .coo {
+            border-left: 3px solid #9b59b6;
+        }
+        .tech {
+            border-left: 3px solid #2ecc71;
+        }
+        .business {
+            border-left: 3px solid #f39c12;
+        }
+        .support {
+            border-left: 3px solid #1abc9c;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .level {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                width: 90%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Agentic AI Center of Excellence</h1>
+        <h2>Organizational Structure</h2>
+    </div>
+    
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background: #e74c3c;"></div>
+            <span>Leadership</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #9b59b6;"></div>
+            <span>Operations</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #2ecc71;"></div>
+            <span>Technical</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #f39c12;"></div>
+            <span>Business</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #1abc9c;"></div>
+            <span>Support</span>
+        </div>
+    </div>
+    
+    <div class="org-tree">
+        <!-- Level 1 -->
+        <div class="level">
+            <div class="box leader">
+                <h3>Chief AI Officer</h3>
+                <p class="title">Executive Leadership</p>
+                <p class="dept">C-Suite / Technology</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Overall strategic direction of Agentic AI initiatives</li>
+                        <li>Secure executive sponsorship and resources</li>
+                        <li>Report AI ROI to board and shareholders</li>
+                        <li>Champion ethical AI governance framework</li>
+                        <li>Final approver for enterprise-wide AI deployments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="connector"></div>
+        
+        <!-- Level 2 -->
+        <div class="level">
+            <div class="box coo">
+                <h3>CoE Director</h3>
+                <p class="title">Program Management</p>
+                <p class="dept">Technology</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Daily operations of the CoE</li>
+                        <li>Resource allocation and prioritization</li>
+                        <li>Cross-departmental coordination</li>
+                        <li>Track KPIs and report to Chief AI Officer</li>
+                        <li>Align AI initiatives with business objectives</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="connector"></div>
+        
+        <!-- Level 3 -->
+        <div class="level">
+            <div class="box tech">
+                <h3>Chief AI Architect</h3>
+                <p class="title">Technical Leadership</p>
+                <p class="dept">IT / Data Science</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Technical architecture oversight</li>
+                        <li>AI model selection & evaluation standards</li>
+                        <li>Technical roadmap for agentic AI platform</li>
+                        <li>Collaborate with security and compliance teams</li>
+                        <li>Review and approve technical designs</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="box business">
+                <h3>AI Value Realization Lead</h3>
+                <p class="title">Business Strategy</p>
+                <p class="dept">Strategy / Finance</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Business case development</li>
+                        <li>ROI tracking and optimization</li>
+                        <li>Value assessment frameworks</li>
+                        <li>Business process transformation</li>
+                        <li>Departmental prioritization metrics</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="box support">
+                <h3>AI Ethics & Governance Lead</h3>
+                <p class="title">Risk Management</p>
+                <p class="dept">Legal / Compliance</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Develop ethical AI framework</li>
+                        <li>Risk assessment methodology</li>
+                        <li>Regulatory compliance oversight</li>
+                        <li>Internal policy development</li>
+                        <li>Bias monitoring and reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="connector"></div>
+        
+        <!-- Level 4 -->
+        <div class="level">
+            <div class="box tech">
+                <h3>AI Engineers</h3>
+                <p class="title">Implementation Team</p>
+                <p class="dept">Technology</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Develop AI solutions and integrations</li>
+                        <li>Model training and fine-tuning</li>
+                        <li>Performance optimization</li>
+                        <li>Technical documentation</li>
+                        <li>DevOps support for AI systems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="box tech">
+                <h3>Data Scientists</h3>
+                <p class="title">Analytics Team</p>
+                <p class="dept">Data & Analytics</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Dataset preparation and validation</li>
+                        <li>Model evaluation and selection</li>
+                        <li>Algorithm development</li>
+                        <li>Performance analytics</li>
+                        <li>Research latest AI approaches</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="box business">
+                <h3>Business Analysts</h3>
+                <p class="title">Requirements Team</p>
+                <p class="dept">Business Operations</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Process analysis and documentation</li>
+                        <li>User requirements gathering</li>
+                        <li>Workflow optimization</li>
+                        <li>Functional testing</li>
+                        <li>User acceptance coordination</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="box support">
+                <h3>Change Management Lead</h3>
+                <p class="title">Adoption Support</p>
+                <p class="dept">HR / Communications</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Change readiness assessments</li>
+                        <li>Communication planning</li>
+                        <li>Training program development</li>
+                        <li>Resistance management</li>
+                        <li>Adoption metrics tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="connector"></div>
+        
+        <!-- Level 5 -->
+        <div class="level">
+            <div class="box business">
+                <h3>Departmental AI Champions</h3>
+                <p class="title">Business Representatives</p>
+                <p class="dept">Cross-Functional</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Sales AI Champion: CRM integration, sales forecasting</li>
+                        <li>Marketing AI Champion: Content automation, analytics</li>
+                        <li>Finance AI Champion: Risk modeling, fraud detection</li>
+                        <li>HR AI Champion: Talent acquisition, employee experience</li>
+                        <li>Operations AI Champion: Process automation, optimization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="box support">
+                <h3>AI Support Team</h3>
+                <p class="title">User Assistance</p>
+                <p class="dept">IT Support</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>AI tool troubleshooting</li>
+                        <li>User onboarding assistance</li>
+                        <li>Knowledge base maintenance</li>
+                        <li>Feedback collection</li>
+                        <li>Support ticket routing and resolution</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="box tech">
+                <h3>AI Research Analysts</h3>
+                <p class="title">Innovation Team</p>
+                <p class="dept">R&D</p>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Technology trend monitoring</li>
+                        <li>Proof of concept development</li>
+                        <li>Academic partnership management</li>
+                        <li>Innovation workshops</li>
+                        <li>Competitive intelligence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
