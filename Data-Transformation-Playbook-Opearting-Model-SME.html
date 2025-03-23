@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Transformation Playbook for SMEs</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #f39c12;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        header {
+            margin-bottom: 40px;
+            text-align: center;
+            padding: 30px 0;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+        }
+        
+        header h1 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .intro-section {
+            margin-bottom: 50px;
+        }
+        
+        .intro-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .intro-section p {
+            margin-bottom: 20px;
+        }
+        
+        .transformation-model {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .model-title {
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+        
+        .model-diagram {
+            display: inline-block;
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .model-circle {
+            width: 700px;
+            height: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .center-circle {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #f0f7fa;
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 10;
+            font-weight: bold;
+            padding: 20px;
+            color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.2);
+        }
+        
+        .outer-segment {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .segment-1 {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(52, 152, 219, 0.1);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .segment-2 {
+            bottom: 50px;
+            left: 100px;
+            background-color: rgba(46, 204, 113, 0.1);
+            border: 2px solid #2ecc71;
+            color: #27ae60;
+        }
+        
+        .segment-3 {
+            bottom: 50px;
+            right: 100px;
+            background-color: rgba(155, 89, 182, 0.1);
+            border: 2px solid #9b59b6;
+            color: #8e44ad;
+        }
+        
+        .connection-line {
+            position: absolute;
+            background-color: #ddd;
+            z-index: 5;
+        }
+        
+        .line-1 {
+            height: 3px;
+            width: 100px;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .line-2 {
+            height: 150px;
+            width: 3px;
+            bottom: 250px;
+            left: 200px;
+            transform: rotate(30deg);
+            transform-origin: bottom;
+        }
+        
+        .line-3 {
+            height: 150px;
+            width: 3px;
+            bottom: 250px;
+            right: 200px;
+            transform: rotate(-30deg);
+            transform-origin: bottom;
+        }
+        
+        .highlight-box {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            border: 3px solid var(--accent-color);
+            bottom: 25px;
+            right: 75px;
+            z-index: 1;
+            background-color: rgba(243, 156, 18, 0.1);
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.2);
+        }
+        
+        .highlight-text {
+            position: absolute;
+            bottom: 5px;
+            right: 70px;
+            font-weight: bold;
+            color: var(--accent-color);
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--accent-color);
+            z-index: 15;
+        }
+        
+        .toc-section {
+            margin-bottom: 50px;
+        }
+        
+        .toc-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .toc-item {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .toc-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .toc-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .toc-item p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .toc-item a {
+            display: inline-block;
+            color: white;
+            background-color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .toc-item a:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .references-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .references-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .reference-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+        }
+        
+        .reference-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .reference-item p {
+            margin-bottom: 10px;
+        }
+        
+        .reference-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .reference-item a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .model-circle {
+                width: 100%;
+                height: 500px;
+            }
+            
+            .center-circle {
+                width: 150px;
+                height: 150px;
+                font-size: 0.9rem;
+            }
+            
+            .outer-segment {
+                width: 150px;
+                height: 150px;
+                font-size: 0.9rem;
+            }
+            
+            .segment-1 {
+                top: 30px;
+            }
+            
+            .segment-2 {
+                bottom: 30px;
+                left: 50px;
+            }
+            
+            .segment-3 {
+                bottom: 30px;
+                right: 50px;
+            }
+            
+            .highlight-box {
+                width: 180px;
+                height: 180px;
+                bottom: 15px;
+                right: 35px;
+            }
+            
+            .highlight-text {
+                font-size: 0.8rem;
+                bottom: 0;
+                right: 40px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .model-circle {
+                height: 400px;
+            }
+            
+            .center-circle {
+                width: 120px;
+                height: 120px;
+                font-size: 0.8rem;
+            }
+            
+            .outer-segment {
+                width: 110px;
+                height: 110px;
+                font-size: 0.8rem;
+                padding: 10px;
+            }
+            
+            .segment-1 {
+                top: 20px;
+            }
+            
+            .segment-2 {
+                bottom: 20px;
+                left: 30px;
+            }
+            
+            .segment-3 {
+                bottom: 20px;
+                right: 30px;
+            }
+            
+            .highlight-box {
+                width: 140px;
+                height: 140px;
+                bottom: 5px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Transformation Playbook for SMEs</h1>
+        <p>A practical guide for small and medium enterprises to build data capabilities with limited resources and developing skillsets</p>
+    </header>
+    
+    <div class="intro-section">
+        <h2>About This Playbook</h2>
+        <p>This playbook is designed specifically for Small and Medium Enterprises (SMEs) embarking on their data transformation journey with limited resources, budget constraints, and emerging technical capabilities. While we use a Food & Beverage business case as our primary example, the principles, frameworks, and implementation strategies outlined here are applicable across various industries.</p>
+        
+        <p>Unlike enterprise-scale digital transformation guides that assume substantial resources and mature technical teams, this playbook acknowledges the reality most SMEs face: the need to build data capabilities incrementally while demonstrating business value at each step. We focus on practical, actionable approaches that balance technical best practices with the constraints of smaller organizations.</p>
+        
+        <p>The playbook walks through establishing a data lake as your foundation, creating cross-disciplinary business domains, implementing appropriate governance structures, and measuring success - all tailored to organizations with developing data maturity. Whether you're a business leader seeking to understand the potential of data-driven decision making or a technical manager tasked with implementing these capabilities, this guide provides a clear roadmap to follow.</p>
+        
+        <div class="transformation-model">
+            <div class="model-title">Data Transformation Framework</div>
+            <div class="model-diagram">
+                <div class="model-circle">
+                    <div class="center-circle">Data<br>Transformation</div>
+                    <div class="outer-segment segment-1">Data Strategy<br><span style="font-size: 0.8em; font-weight: normal;">(Vision, Goals, Value Proposition)</span></div>
+                    <div class="outer-segment segment-2">Technology<br><span style="font-size: 0.8em; font-weight: normal;">(Architecture, Tools, Infrastructure)</span></div>
+                    <div class="outer-segment segment-3">Operating Model<br><span style="font-size: 0.8em; font-weight: normal;">(People, Process, Organization)</span></div>
+                    <div class="highlight-box"></div>
+                    <div class="highlight-text">Playbook Focus Area</div>
+                    
+                    <div class="connection-line line-1"></div>
+                    <div class="connection-line line-2"></div>
+                    <div class="connection-line line-3"></div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">A successful data transformation requires alignment across three key dimensions: data strategy, technology, and operating model. This playbook focuses primarily on the operating model component – how to structure your organization, processes, and people to enable data-driven capabilities.</p>
+        </div>
+    </div>
+    
+    <div class="toc-section">
+        <h2>Playbook Contents</h2>
+        <div class="toc-grid">
+            <div class="toc-item">
+                <h3>Section 1: Introduction</h3>
+                <p>Why a Data Lake is the Foundation of Data Transformation - the business case for SMEs to invest in data capabilities.</p>
+                <a href="section1.html">Read Section</a>
+            </div>
+            
+            <div class="toc-item">
+                <h3>Section 2: Data Lake Foundation</h3>
+                <p>The Foundation of Our Strategic Data Transformation - understanding the core components and benefits.</p>
+                <a href="section2.html">Read Section</a>
+            </div>
+            
+            <div class="toc-item">
+                <h3>Section 3: Implementation Blueprint</h3>
+                <p>Data Lake Implementation Blueprint - practical steps to build your data infrastructure with limited resources.</p>
+                <a href="section3.html">Read Section</a>
+            </div>
+            
+            <div class="toc-item">
+                <h3>Section 4: Business Domains</h3>
+                <p>Cross-Disciplinary Business Domains Enabled by Our Data Lake - connecting technical capabilities to business outcomes.</p>
+                <a href="section4.html">Read Section</a>
+            </div>
+            
+            <div class="toc-item">
+                <h3>Section 5: Domain Example</h3>
+                <p>Building Cross-Disciplinary Business Domains: Integrated Inventory Management - detailed case study.</p>
+                <a href="section5.html">Read Section</a>
+            </div>
+            
+            <div class="toc-item">
+                <h3>Section 6: Data Organization</h3>
+                <p>Data Governance & Team Structure: Building an Effective Data Organization - designing right-sized structures.</p>
+                <a href="section6.html">Read Section</a>
+            </div>
+            
+            <div class="toc-item">
+                <h3>Section 7: Project Framework</h3>
+                <p>Data Project Framework: Scaling Governance to Project Types - adapting processes to different project scales.</p>
+                <a href="section7.html">Read Section</a>
+            </div>
+            
+            <div class="toc-item">
+                <h3>Section 8: Success Metrics</h3>
+                <p>Success Metrics: KPI Tree for Data Projects - measuring business value and technical performance.</p>
+                <a href="section8.html">Read Section</a>
+            </div>
+            
+            <div class="toc-item">
+                <h3>Section 9: Implementation Plan</h3>
+                <p>Conclusion: Path Forward for Data Lake Formation and DCoE Implementation - actionable roadmap for execution.</p>
+                <a href="section9.html">Read Section</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="references-section">
+        <h2>Key References</h2>
+        <div class="reference-item">
+            <h3>McKinsey's "Rewired" Book</h3>
+            <p>This playbook draws inspiration from McKinsey's comprehensive guide on digital and AI transformation, adapting its enterprise-focused frameworks to suit the needs and constraints of SMEs. Many of the operating models and implementation approaches have been modified from this source to fit smaller-scale organizations.</p>
+            <p><a href="https://www.amazon.co.uk/Rewired-McKinsey-Guide-Outcompeting-Digital/dp/1394207115" target="_blank">Rewired: The McKinsey Guide to Outcompeting in the Age of Digital and AI</a> by Eric Lamarre, Kate Smaje, and Rodney Zemmel</p>
+        </div>
+        
+        <div class="reference-item">
+            <h3>The Data "Center of Excellence" Framework</h3>
+            <p>The DCoE structure and agile pod approaches referenced throughout this playbook have been influenced by Randall DeFauw's perspective on data Centers of Excellence. We've adapted these concepts specifically for organizations with developing data maturity and limited resources.</p>
+            <p><a href="https://medium.com/@rdefauw/the-data-center-of-excellence-a53e71b23683" target="_blank">The Data "Center of Excellence"</a> by Randall DeFauw</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Data Transformation Playbook for SMEs &copy; 2025</p>
+        <p>Designed for organizations with limited resources and developing data maturity</p>
+    </footer>
+</body>
+</html>
