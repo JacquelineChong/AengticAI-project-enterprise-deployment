@@ -37,6 +37,181 @@
         </div>
     </div>
     
+<div class="comparison-model">
+    <h3 class="comparison-title">Traditional IT Projects vs. Data Lake Implementation</h3>
+    
+    <div class="model-container">
+        <div class="model-column traditional">
+            <h4 class="model-heading">Traditional IT Project</h4>
+            <div class="traditional-diagram">
+                <div class="stage stage-1">
+                    <div class="stage-icon">1</div>
+                    <div class="stage-content">
+                        <div class="actor actor-business">Business</div>
+                        <div class="action-arrow">
+                            <span class="arrow-text">Define Requirements</span>
+                            <!-- Changed arrow to point down -->
+                            <svg width="20" height="30" viewBox="0 0 20 30">
+                                <path d="M10,0 L10,25 M3,18 L10,25 L17,18" fill="none" stroke="#666" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stage stage-2">
+                    <div class="stage-icon">2</div>
+                    <div class="stage-content">
+                        <div class="actor actor-it">IT Department</div>
+                        <div class="action-box">
+                            <div class="action-item">Design</div>
+                            <div class="action-item">Build</div>
+                            <div class="action-item">Test</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stage stage-3">
+                    <div class="stage-icon">3</div>
+                    <div class="stage-content">
+                        <div class="actor actor-it">IT Department</div>
+                        <div class="action-arrow">
+                            <span class="arrow-text">Deliver System</span>
+                            <!-- Changed arrow to point down -->
+                            <svg width="20" height="30" viewBox="0 0 20 30">
+                                <path d="M10,0 L10,25 M3,18 L10,25 L17,18" fill="none" stroke="#666" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stage stage-4">
+                    <div class="stage-icon">4</div>
+                    <div class="stage-content">
+                        <div class="actor actor-business">Business</div>
+                        <div class="action-box final-box">
+                            <div class="action-item final-action">Use Static System</div>
+                            <div class="value-line">
+                                <span class="value-label">Value</span>
+                                <span class="value-curve linear"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diagram-caption">
+                    Linear, handoff-based process with fixed value potential
+                </div>
+            </div>
+        </div>
+        
+        <div class="model-column data-lake">
+            <h4 class="model-heading">Data Lake Implementation</h4>
+            <div class="data-lake-diagram">
+                <div class="cycle-container">
+                    <div class="cycle-center">
+                        <div class="center-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <path d="M20,5 C12.3,5 5,12.3 5,20 C5,27.7 12.3,35 20,35 C27.7,35 35,27.7 35,20 C35,12.3 27.7,5 20,5 Z" fill="none" stroke="#3498db" stroke-width="2"/>
+                                <path d="M20,10 L20,20 L28,25" fill="none" stroke="#3498db" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="center-text">Data<br>Lake</div>
+                    </div>
+                    
+                    <!-- Position adjustments for nodes are in the CSS below -->
+                    <div class="cycle-node node-1">
+                        <div class="node-content">
+                            <div class="node-title">Business Identifies<br>Opportunity</div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12,2 L2,7 L12,12 L22,7 Z" fill="#f39c12"/>
+                                    <path d="M2,12 L12,17 L22,12" fill="none" stroke="#f39c12" stroke-width="2"/>
+                                    <path d="M2,17 L12,22 L22,17" fill="none" stroke="#f39c12" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-node node-2">
+                        <div class="node-content">
+                            <div class="node-title">Collaborative<br>Solution Design</div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <circle cx="6" cy="8" r="4" fill="#3498db"/>
+                                    <circle cx="18" cy="8" r="4" fill="#3498db"/>
+                                    <circle cx="12" cy="18" r="4" fill="#3498db"/>
+                                    <line x1="6" y1="8" x2="18" y2="8" stroke="#3498db" stroke-width="1"/>
+                                    <line x1="6" y1="8" x2="12" y2="18" stroke="#3498db" stroke-width="1"/>
+                                    <line x1="18" y1="8" x2="12" y2="18" stroke="#3498db" stroke-width="1"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-node node-3">
+                        <div class="node-content">
+                            <div class="node-title">Iterative<br>Development</div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M20,8 C18,4 13,3 9,5 C5,7 4,12 6,16 C8,20 13,21 17,19 C19,18 20,16 21,14" fill="none" stroke="#9b59b6" stroke-width="2"/>
+                                    <path d="M16,4 L20,8 L16,12" fill="none" stroke="#9b59b6" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-node node-4">
+                        <div class="node-content">
+                            <div class="node-title">Business<br>Implementation</div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="#2ecc71" stroke-width="2"/>
+                                    <path d="M8,11 L11,14 L17,8" fill="none" stroke="#2ecc71" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-node node-5">
+                        <div class="node-content">
+                            <div class="node-title">Data Generation<br>& Insights</div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M5,21 L5,3 M5,16 L10,16 M5,12 L12,12 M5,8 L8,8" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                    <path d="M14,21 L14,9 M14,16 L19,16 M14,12 L17,12" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-arrows">
+                        <svg width="300" height="300" viewBox="0 0 300 300" class="arrows-svg">
+                            <path class="cycle-path" d="M150,50 C220,50 250,80 280,150 C250,220 220,250 150,250 C80,250 50,220 20,150 C50,80 80,50 150,50" fill="none" stroke="#ddd" stroke-width="4" stroke-dasharray="8 4"/>
+                            <path class="arrow-path" d="M265,130 L280,150 L265,170" fill="none" stroke="#888" stroke-width="2"/>
+                            <path class="arrow-path" d="M35,170 L20,150 L35,130" fill="none" stroke="#888" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                
+               <div class="value-growth">
+        <div class="value-label">Value Growth</div>
+        <div class="value-curve-container">
+            <svg width="100%" height="40" viewBox="0 0 200 40" preserveAspectRatio="none">
+                <path class="compound-curve" d="M0,38 C40,35 70,25 100,15 C130,5 160,2 200,5" stroke="#3498db" stroke-width="2" fill="none"/>
+                <line x1="0" y1="38" x2="200" y2="38" stroke="#eee" stroke-width="1"/>
+            </svg>
+        </div>
+        <div class="time-label">Time →</div>
+    </div>
+                
+                <div class="diagram-caption">
+                    Cyclical, collaborative process with continuously increasing value
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+  
     <div class="key-message">
         <h3>Key Message:</h3>
         <p>The data lake is not a one-time project but the foundation of an evolving data ecosystem that requires continuous business participation. It's a strategic asset that becomes more valuable over time through collaboration between business and technical teams.</p>
@@ -45,7 +220,7 @@
     <div class="visualization">
         <h3>A data transformation approach results in collaboration that creates ongoing value</h3>
         <div class="diagram-container">
-            <canvas id="dataTransformationCanvas" width="1000" height="600"></canvas>
+            <canvas id="dataTransformationCanvas" width="1000" height="800"></canvas>
         </div>
         <div class="diagram-caption">
             <p><strong>Flow of data ———→</strong></p>
@@ -237,7 +412,354 @@
 .back-button:hover {
     background-color: #1a252f;
 }  
+    .comparison-model {
+        margin: 50px 0;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+    }
+    
+    .comparison-title {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #2c3e50;
+        font-size: 1.4rem;
+    }
+    
+    .model-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .model-column {
+        flex: 1;
+        min-width: 300px;
+        max-width: 450px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    
+    .traditional {
+        background-color: rgba(236, 240, 241, 0.5);
+        border: 1px solid #ddd;
+    }
+    
+    .data-lake {
+        background-color: rgba(52, 152, 219, 0.05);
+        border: 1px solid #bde0f3;
+    }
+    
+    .model-heading {
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+        color: #2c3e50;
+    }
+    
+    /* Traditional IT Project Diagram */
+    .traditional-diagram {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .stage {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .stage-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 50%;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+    
+    .stage-content {
+        flex-grow: 1;
+    }
+    
+    .actor {
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    
+    .actor-business {
+        background-color: #f39c12;
+        color: white;
+    }
+    
+    .actor-it {
+        background-color: #3498db;
+        color: white;
+    }
+    
+    .action-arrow {
+        display: flex;
+        flex-direction: column; /* Changed to column to align arrow downward */
+        align-items: center;
+        padding: 8px 0;
+        gap: 5px;
+    }
+    
+    .arrow-text {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 5px; /* Added margin for spacing */
+    }
+    
+    .action-box {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    
+    .action-item {
+        padding: 8px 180px;
+        border-bottom: 1px solid #ddd;
+        font-size: 0.9rem;
+        background-color: #fff;
+    }
+    
+    .action-item:last-child {
+        border-bottom: none;
+    }
+    
+    .final-box {
+        background-color: #f8f9fa;
+    }
+    
+    .final-action {
+        font-weight: bold;
+        background-color: #f8f9fa;
+    }
+    
+    .value-line {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 10px;
+        border-top: 1px dashed #ddd;
+    }
+    
+    .value-label {
+        font-size: 0.8rem;
+        color: #666;
+    }
+    
+    .value-curve {
+        flex-grow: 1;
+        height: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .linear {
+        background: linear-gradient(to right, #f8f9fa, #3498db);
+        height: 3px;
+    }
+    
+    /* Data Lake Diagram */
+    .data-lake-diagram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .cycle-container {
+        position: relative;
+        width: 300px; /* Increased from 250px */
+        height: 300px; /* Increased from 250px */
+        margin: 20px 0;
+    }
+    
+    .cycle-center {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background-color: #f0f7fa;
+        border: 2px solid #3498db;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        padding: 5px;
+    }
+    
+    .center-icon {
+        margin-bottom: 2px;
+    }
+    
+    .center-text {
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center;
+        color: #3498db;
+    }
+    
+    .cycle-node {
+        position: absolute;
+        width: 90px; /* Reduced from 100px to fit better */
+        height: 90px; /* Reduced from 100px to fit better */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .node-content {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 100%;
+        height: 100%;
+    }
+    
+    .node-title {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .node-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Updated node positions to be more spread out */
+    .node-1 {
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .node-2 {
+        top: 2%;
+        right: 2%;
+    }
+    
+    .node-3 {
+        bottom: 10%;
+        right: -10%;
+    }
+    
+    .node-4 {
+        bottom: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .node-5 {
+        bottom: 40%;
+        left: -15%;
+    }
+    
+    .cycle-arrows {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+    
+    .arrows-svg {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .value-growth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+    .value-label {
+        font-size: 0.8rem;
+        color: #666;
+        margin-bottom: 5px;
+    }
   
+      /* Replace the compound class and add this new style for the curve container */
+    .value-curve-container {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        background-color: #fff;
+    }
+    
+    .compound-curve {
+        stroke-dasharray: none;
+        stroke-linecap: round;
+    }
+    
+    
+    .time-label {
+        font-size: 0.8rem;
+        color: #666;
+        align-self: flex-end;
+        margin-top: 5px;
+    }
+    
+    .diagram-caption {
+        text-align: center;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .model-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .model-column {
+            width: 100%;
+        }
+        
+        .cycle-container {
+            width: 280px;
+            height: 280px;
+        }
+        
+        .cycle-node {
+            width: 80px;
+            height: 80px;
+        }
+    }  
   
 </style>
 
@@ -367,7 +889,7 @@
         const headers = [
             "Data\nSources",
             "Data\nPlatform", 
-            "Data\nProducts", 
+            "Data\nDomains", 
             "Consumption\nArchetypes", 
             "Use\nCases"
         ];
