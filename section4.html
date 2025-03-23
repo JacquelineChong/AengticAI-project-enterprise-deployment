@@ -1,10 +1,10 @@
 <section id="domain-prioritization">
-    <h2>Cross-Disciplinary Business Domains Enabled by Our Data Lake</h2>
+    <h2>4. Cross-Disciplinary Business Domains Enabled by a Data Lake</h2>
     
     <div class="domain-intro">
-        <p>A key benefit of implementing a data lake is our ability to create entirely new business domains that span traditional departmental boundaries. Previously, data was siloed within individual departments, limiting our perspective and innovative potential. With our unified data foundation, we can now combine previously disconnected data sets to unlock new value opportunities.</p>
+        <p>A key benefit of implementing a data lake is the ability to create entirely new business domains that span traditional departmental boundaries. Previously, data was siloed within individual departments, limiting the perspective and innovative potential. With a unified data foundation, we can now combine previously disconnected data sets to unlock new value opportunities.</p>
         
-        <p>The matrix below illustrates potential cross-disciplinary domains for our F&B business, prioritized by value potential and feasibility. These are not mere theoretical concepts—they represent practical initiatives already demonstrated by industry leaders or successfully implemented in adjacent sectors.</p>
+        <p>The matrix below illustrates potential cross-disciplinary domains for a F&B business, prioritized by value potential and feasibility. </p>
     </div>
     
     <div class="diagram-container">
@@ -17,7 +17,7 @@
         <div class="explanation-grid">
             <div class="explanation-item">
                 <h4>Breaking Down Data Silos</h4>
-                <p>Currently, our menu performance data lives in operations, customer feedback in marketing, and inventory in supply chain. Through the data lake, these separate data sources can be combined to create a unified view—enabling decisions that optimize across multiple objectives rather than sub-optimizing within department boundaries.</p>
+                <p>Currently, menu performance data lives in operations, customer feedback in marketing, and inventory in supply chain. Through the data lake, these separate data sources can be combined to create a unified view—enabling decisions that optimize across multiple objectives rather than sub-optimizing within department boundaries.</p>
             </div>
             
             <div class="explanation-item">
@@ -27,15 +27,25 @@
             
             <div class="explanation-item">
                 <h4>Supporting Rapid Experimentation</h4>
-                <p>High-value domains like dynamic pricing and personalized promotion engines require continuous testing and optimization. The data lake creates a sandbox environment where data scientists can safely experiment with new models without disrupting production systems, accelerating our learning cycle.</p>
+                <p>High-value domains like dynamic seasonal pricing and personalized promotion engines require continuous testing and optimization. The data lake creates a sandbox environment where data scientists can safely experiment with new models without disrupting production systems, accelerating our learning cycle.</p>
             </div>
             
             <div class="explanation-item">
                 <h4>Democratizing Data Access</h4>
-                <p>By centralizing our data assets and implementing appropriate security controls, we can give more team members access to cross-functional data—expanding our innovation capability beyond just technical specialists and enabling more stakeholders to contribute insights.</p>
+                <p>By centralizing the data assets and implementing appropriate security controls, the data lake can give more team members access to cross-functional data—expanding our innovation capability beyond just technical specialists and enabling more stakeholders to contribute insights.</p>
             </div>
         </div>
     </div>
+  
+<div class="navigation-buttons">
+    <a href="Data-Transformation-Playbook-Opearting-Model-SME.html" class="nav-button back-button">
+        <span class="button-icon">←</span> Back to Playbook Home
+    </a>
+</div>
+
+
+  
+
 </section>
 
 <style>
@@ -106,6 +116,43 @@
         max-width: 100%;
         height: auto;
     }
+/* Navigation buttons styles */
+.navigation-buttons {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.button-icon {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.back-button {
+    background-color: #2c3e50;
+}
+
+.back-button:hover {
+    background-color: #1a252f;
+}
+
 </style>
 
 <script>
@@ -164,7 +211,7 @@
             // Subtitle
             ctx.font = fonts.subtitle;
             ctx.fillStyle = colors.text;
-            ctx.fillText('For Hong Kong\'s largest Cha Chaan Teng chain', 20, 70);
+            ctx.fillText('For a F&B Chain', 20, 70);
             
             // Define matrix area dimensions
             const marginLeft = 250;
