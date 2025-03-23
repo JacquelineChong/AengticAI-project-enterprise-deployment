@@ -1,0 +1,368 @@
+<section id="domain-prioritization">
+    <h2>Cross-Disciplinary Business Domains Enabled by Our Data Lake</h2>
+    
+    <div class="domain-intro">
+        <p>A key benefit of implementing a data lake is our ability to create entirely new business domains that span traditional departmental boundaries. Previously, data was siloed within individual departments, limiting our perspective and innovative potential. With our unified data foundation, we can now combine previously disconnected data sets to unlock new value opportunities.</p>
+        
+        <p>The matrix below illustrates potential cross-disciplinary domains for our F&B business, prioritized by value potential and feasibility. These are not mere theoretical concepts—they represent practical initiatives already demonstrated by industry leaders or successfully implemented in adjacent sectors.</p>
+    </div>
+    
+    <div class="diagram-container">
+        <canvas id="domainMatrixCanvas" width="1200" height="900"></canvas>
+    </div>
+    
+    <div class="domain-explanation">
+        <h3>Why Cross-Disciplinary Domains Need a Data Lake</h3>
+        
+        <div class="explanation-grid">
+            <div class="explanation-item">
+                <h4>Breaking Down Data Silos</h4>
+                <p>Currently, our menu performance data lives in operations, customer feedback in marketing, and inventory in supply chain. Through the data lake, these separate data sources can be combined to create a unified view—enabling decisions that optimize across multiple objectives rather than sub-optimizing within department boundaries.</p>
+            </div>
+            
+            <div class="explanation-item">
+                <h4>Enabling New Analytics Capabilities</h4>
+                <p>Many of the prioritized domains require sophisticated analytical techniques like machine learning and predictive modeling. These techniques can only be effectively deployed when diverse data types (transactional, customer, operational, external) are brought together in a consistent format with appropriate governance—exactly what our data lake provides.</p>
+            </div>
+            
+            <div class="explanation-item">
+                <h4>Supporting Rapid Experimentation</h4>
+                <p>High-value domains like dynamic pricing and personalized promotion engines require continuous testing and optimization. The data lake creates a sandbox environment where data scientists can safely experiment with new models without disrupting production systems, accelerating our learning cycle.</p>
+            </div>
+            
+            <div class="explanation-item">
+                <h4>Democratizing Data Access</h4>
+                <p>By centralizing our data assets and implementing appropriate security controls, we can give more team members access to cross-functional data—expanding our innovation capability beyond just technical specialists and enabling more stakeholders to contribute insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #domain-prioritization {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    
+    h3 {
+        color: #2c3e50;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .domain-intro {
+        margin-bottom: 30px;
+    }
+    
+    .diagram-container {
+        max-width: 1200px;
+        margin: 30px auto;
+        background-color: white;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .domain-explanation {
+        margin-top: 40px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    
+    .explanation-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 20px;
+    }
+    
+    .explanation-item {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .explanation-item h4 {
+        color: #3498db;
+        margin-top: 0;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+    
+    canvas {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<script>
+    window.addEventListener('load', function() {
+        // Get the canvas element and its 2D context
+        const canvas = document.getElementById('domainMatrixCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas dimensions based on its display size
+        const displayWidth = canvas.clientWidth;
+        const displayHeight = canvas.clientHeight;
+        
+        if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+            canvas.width = displayWidth;
+            canvas.height = displayHeight;
+        }
+        
+        // Colors
+        const colors = {
+            background: '#ffffff',
+            axisLine: '#333333',
+            gridLine: '#e0e0e0',
+            headerBg: '#1a2a3a',
+            headerText: '#ffffff',
+            regularDomain: '#3498db',
+            prioritizedDomain: '#4169e1',
+            prioritizedArea: '#f0f0f0',
+            text: '#333333'
+        };
+        
+        // Fonts
+        const fonts = {
+            header: 'bold 18px Arial',
+            title: 'bold 24px Arial',
+            subtitle: 'italic 18px Arial',
+            axisLabel: 'bold 16px Arial',
+            domainLabel: '16px Arial',
+            bulletPoint: '14px Arial'
+        };
+        
+        // Draw the domain prioritization matrix
+        function drawDomainMatrix() {
+            const width = canvas.width;
+            const height = canvas.height;
+            
+            // Background
+            ctx.fillStyle = colors.background;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Title
+            ctx.font = fonts.title;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'left';
+            ctx.fillText('Domains are prioritized based on value and feasibility', 20, 40);
+            
+            // Subtitle
+            ctx.font = fonts.subtitle;
+            ctx.fillStyle = colors.text;
+            ctx.fillText('For Hong Kong\'s largest Cha Chaan Teng chain', 20, 70);
+            
+            // Define matrix area dimensions
+            const marginLeft = 250;
+            const marginTop = 150;
+            const marginBottom = 200;
+            const marginRight = 100;
+            const matrixWidth = width - marginLeft - marginRight;
+            const matrixHeight = height - marginTop - marginBottom;
+            
+            // Draw prioritized domain area (light gray circle)
+            const circleX = marginLeft + (matrixWidth * 0.75);
+            const circleY = marginTop + (matrixHeight * 0.5);
+            const circleRadius = matrixHeight * 0.45;
+            
+            ctx.beginPath();
+            ctx.arc(circleX, circleY, circleRadius, 0, Math.PI * 2);
+            ctx.fillStyle = colors.prioritizedArea;
+            ctx.fill();
+            
+            // Draw "Prioritized domains" text
+            ctx.font = fonts.header;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'center';
+            ctx.fillText('Prioritized domains', circleX, marginTop + 30);
+            
+            // Draw axes
+            // Vertical axis
+            ctx.beginPath();
+            ctx.moveTo(marginLeft, marginTop);
+            ctx.lineTo(marginLeft, marginTop + matrixHeight);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = colors.axisLine;
+            ctx.stroke();
+            
+            // Horizontal axis
+            ctx.beginPath();
+            ctx.moveTo(marginLeft, marginTop + matrixHeight);
+            ctx.lineTo(marginLeft + matrixWidth, marginTop + matrixHeight);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = colors.axisLine;
+            ctx.stroke();
+            
+            // Axis labels
+            // VALUE
+            ctx.fillStyle = colors.headerBg;
+            ctx.fillRect(30, marginTop + matrixHeight/2 - 30, 170, 60);
+            
+            ctx.font = fonts.header;
+            ctx.fillStyle = colors.headerText;
+            ctx.textAlign = 'center';
+            ctx.fillText('VALUE', 115, marginTop + matrixHeight/2 + 10);
+            
+            // VALUE criteria
+            const valueCriteria = [
+                'Customer experience',
+                'Financial benefits',
+                'Speed to value',
+                'Synergy with other domains'
+            ];
+            
+            ctx.font = fonts.bulletPoint;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'left';
+            
+            valueCriteria.forEach((criterion, index) => {
+                ctx.fillText('• ' + criterion, 50, marginTop + matrixHeight/2 + 80 + (index * 25));
+            });
+            
+            // HIGH/LOW for Value axis
+            ctx.font = fonts.axisLabel;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'right';
+            ctx.fillText('HIGH', marginLeft - 20, marginTop + 10);
+            ctx.fillText('LOW', marginLeft - 20, marginTop + matrixHeight - 10);
+            
+            // FEASIBILITY
+            ctx.fillStyle = colors.headerBg;
+            ctx.fillRect(marginLeft + matrixWidth/2 - 150, marginTop + matrixHeight + 20, 300, 60);
+            
+            ctx.font = fonts.header;
+            ctx.fillStyle = colors.headerText;
+            ctx.textAlign = 'center';
+            ctx.fillText('FEASIBILITY', marginLeft + matrixWidth/2, marginTop + matrixHeight + 55);
+            
+            // FEASIBILITY criteria in two columns
+            const leftCriteria = [
+                'Executive sponsorship',
+                'Data readiness',
+                'Technology readiness'
+            ];
+            
+            const rightCriteria = [
+                'Ease of adoption',
+                'Ease of enterprise scaling'
+            ];
+            
+            // Left column
+            ctx.font = fonts.bulletPoint;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'left';
+            
+            leftCriteria.forEach((criterion, index) => {
+                ctx.fillText('• ' + criterion, marginLeft + 50, marginTop + matrixHeight + 110 + (index * 25));
+            });
+            
+            // Right column
+            rightCriteria.forEach((criterion, index) => {
+                ctx.fillText('• ' + criterion, marginLeft + matrixWidth/2 + 50, marginTop + matrixHeight + 110 + (index * 25));
+            });
+            
+            // HIGH/LOW for Feasibility axis
+            ctx.font = fonts.axisLabel;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'center';
+            ctx.fillText('LOW', marginLeft + 10, marginTop + matrixHeight + 15);
+            ctx.fillText('HIGH', marginLeft + matrixWidth - 10, marginTop + matrixHeight + 15);
+            
+            // Draw domains - non-prioritized (light blue)
+            const nonPrioritizedDomains = [
+                { name: 'Menu Engineering', x: 0.25, y: 0.2 },
+                { name: 'Cost Analytics', x: 0.35, y: 0.35 },
+                { name: 'Restaurant Operations', x: 0.45, y: 0.5 },
+                { name: 'Digital Experience', x: 0.85, y: 0.8 },
+                { name: 'Culinary Innovation', x: 0.15, y: 0.8 }
+            ];
+            
+            nonPrioritizedDomains.forEach(domain => {
+                drawDomain(
+                    marginLeft + (domain.x * matrixWidth),
+                    marginTop + (domain.y * matrixHeight),
+                    domain.name,
+                    colors.regularDomain
+                );
+            });
+            
+            // Draw domains - prioritized (dark blue)
+            const prioritizedDomains = [
+                { name: 'Dynamic Seasonal Pricing', x: 0.75, y: 0.3 },
+                { name: 'Integrated Inventory Management', x: 0.7, y: 0.5 },
+                { name: 'Personalized Promotion Engine', x: 0.85, y: 0.6 }
+            ];
+            
+            prioritizedDomains.forEach(domain => {
+                drawDomain(
+                    marginLeft + (domain.x * matrixWidth),
+                    marginTop + (domain.y * matrixHeight),
+                    domain.name,
+                    colors.prioritizedDomain
+                );
+            });
+        }
+        
+        // Helper function to draw a domain bubble with text
+        function drawDomain(x, y, name, color) {
+            // Draw circle
+            ctx.beginPath();
+            ctx.arc(x, y, 25, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.fill();
+            
+            // Draw text
+            ctx.font = fonts.domainLabel;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // If name has spaces, put it on multiple lines
+            if (name.includes(' ')) {
+                const words = name.split(' ');
+                let line = '';
+                let lines = [];
+                
+                for (let i = 0; i < words.length; i++) {
+                    const testLine = line + words[i] + ' ';
+                    const metrics = ctx.measureText(testLine);
+                    const testWidth = metrics.width;
+                    
+                    if (testWidth > 150 && i > 0) {
+                        lines.push(line);
+                        line = words[i] + ' ';
+                    } else {
+                        line = testLine;
+                    }
+                }
+                lines.push(line);
+                
+                // Calculate vertical starting position based on number of lines
+                let yOffset = y - ((lines.length - 1) * 15);
+                
+                lines.forEach((line, index) => {
+                    ctx.fillText(line.trim(), x, yOffset + (index * 30));
+                });
+            } else {
+                ctx.fillText(name, x, y);
+            }
+        }
+        
+        // Run the drawing
+        drawDomainMatrix();
+    });
+</script>
