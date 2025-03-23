@@ -1,0 +1,617 @@
+<section id="vision-roadmap">
+    <h2>Data Lake: The Foundation of Our Strategic Data Transformation</h2>
+    
+    <div class="vision-statement">
+        <p>The data lake is not just a technological upgrade—it's the cornerstone that enables our entire strategic data transformation. By centralizing our data and fostering collaboration between departments, we create the foundation upon which all our data-driven initiatives can be built. This comprehensive approach allows us to move from isolated information silos to an integrated ecosystem where data flows freely, insights are generated continuously, and value is created exponentially.</p>
+    </div>
+    
+    <div class="key-concept">
+        <h3>Why Our Data Lake is the Cornerstone of Transformation</h3>
+        <p>The data lake serves as the foundation for our transformation because it:</p>
+        <ul>
+            <li><strong>Consolidates disparate data sources</strong> across all restaurant locations, supply chain, customer interactions, and market trends</li>
+            <li><strong>Democratizes access to data</strong> by making it available to all departments through standardized interfaces</li>
+            <li><strong>Preserves data in its native format</strong>, allowing for maximum flexibility in how it can be analyzed and used</li>
+            <li><strong>Enables advanced analytics capabilities</strong> that would be impossible with traditional data storage approaches</li>
+            <li><strong>Creates a shared foundation</strong> upon which all departments can build their data products and initiatives</li>
+        </ul>
+    </div>
+    
+ <div class="strategic-roadmap">
+    <h3>Strategic Roadmap for Our Data Transformation</h3>
+    <p>This three-phase roadmap outlines how we'll build our data capabilities over time, with the data lake as the central enabler of our strategic initiatives.</p>
+    
+    <div class="diagram-container">
+        <canvas id="roadmapCanvas" width="1000" height="900"></canvas>
+    </div>
+    
+    <div class="diagram-caption">
+        <p><em>Our strategic roadmap shows how the data lake enables progressively more sophisticated data capabilities and business value over time.</em></p>
+    </div>
+</div>
+    
+    <div class="data-lake-connection">
+        <h3>How the Data Lake Makes This Roadmap Possible</h3>
+        <p>Without a unified data foundation, the strategic initiatives in our roadmap would be disconnected, inefficient, and limited in scope. The data lake enables our roadmap by:</p>
+        
+        <div class="connection-grid">
+            <div class="connection-item">
+                <h4>Enabling Cross-Functional Data Products</h4>
+                <p>The data lake breaks down silos between departments, allowing marketing to access operations data, finance to leverage customer information, and supply chain to incorporate menu performance. This interconnectedness powers the domain initiatives in our roadmap, such as menu optimization and personalized marketing.</p>
+            </div>
+            
+            <div class="connection-item">
+                <h4>Supporting Progressive Capability Building</h4>
+                <p>Our foundational capabilities (talent, architecture, operating model) all rely on having a central data repository. The data lake provides the platform where these capabilities can be developed incrementally and in coordination with each other.</p>
+            </div>
+            
+            <div class="connection-item">
+                <h4>Facilitating Scaling and Replication</h4>
+                <p>Once we develop successful data products for one domain (like customer analytics), the data lake makes it easier to replicate and scale these approaches to other domains (like staff performance or supply chain optimization), accelerating our transformation timeline.</p>
+            </div>
+            
+            <div class="connection-item">
+                <h4>Reducing Technical Debt</h4>
+                <p>By building our data capabilities on a unified platform from the start, we avoid creating multiple disconnected systems that would eventually require costly integration or replacement. This allows us to invest more in value-generating initiatives rather than maintenance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #vision-roadmap {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    
+    h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+    }
+    
+    .vision-statement {
+        background-color: #f5f7fa;
+        border-left: 4px solid #3498db;
+        padding: 20px;
+        margin: 20px 0;
+        font-size: 1.1em;
+    }
+    
+    .key-concept {
+        margin: 30px 0;
+    }
+    
+    .key-concept ul {
+        padding-left: 25px;
+    }
+    
+    .key-concept li {
+        margin-bottom: 10px;
+    }
+    
+    .strategic-roadmap {
+        margin: 40px 0;
+    }
+    
+  
+    .diagram-container {
+        max-width: 1000px;
+        margin: 20px auto;
+        border: 1px solid #e0e0e0;
+        background-color: white;
+        overflow: auto;
+    }
+    
+    canvas {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .diagram-caption {
+        text-align: center;
+        font-style: italic;
+        margin: 15px 0 30px;
+    }
+    
+    .data-lake-connection {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 30px 0;
+    }
+    
+    .connection-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .connection-item {
+        background-color: white;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .connection-item h4 {
+        color: #3498db;
+        margin-top: 0;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+    
+    canvas {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<script>
+    window.addEventListener('load', function() {
+        // Get the canvas element and its 2D context
+        const canvas = document.getElementById('roadmapCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Colors
+        const colors = {
+            background: '#ffffff',
+            gridLine: '#e0e0e0',
+            headerBg: '#f0f0f0',
+            sectionHeader: '#333333',
+            designPhase: '#f0f0f0',
+            discoveryPhase: '#4169e1',
+            proofOfConceptPhase: '#78a4fa',
+            productionPhase: '#cccccc',
+            text: '#333333',
+            phaseHeader: '#666666'
+        };
+        
+        // Fonts
+        const fonts = {
+            header: 'bold 16px Arial',
+            subheader: 'bold 14px Arial',
+            normal: '13px Arial',
+            small: '11px Arial'
+        };
+        
+        // Layout parameters
+        const margin = 50;
+        const leftColumnWidth = 320;
+        const phaseHeaderHeight = 70;
+        const quarterWidth = 85;
+        const rowHeight = 30;
+        
+        // Calculate total width for quarters
+        const numQuarters = 8; // Q3, Q4, Q1, Q2, Q3, Q4, Q1, Q2
+        const gridWidth = quarterWidth * numQuarters;
+        const totalWidth = leftColumnWidth + gridWidth + margin;
+        
+        // Helper function to draw a text that can wrap
+        function drawWrappedText(text, x, y, maxWidth, lineHeight, font, align = 'left') {
+            ctx.font = font;
+            ctx.textAlign = align;
+            
+            const words = text.split(' ');
+            let line = '';
+            let lines = [];
+            
+            for (let i = 0; i < words.length; i++) {
+                const testLine = line + words[i] + ' ';
+                const metrics = ctx.measureText(testLine);
+                const testWidth = metrics.width;
+                
+                if (testWidth > maxWidth && i > 0) {
+                    lines.push(line);
+                    line = words[i] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            lines.push(line);
+            
+            lines.forEach((line, index) => {
+                ctx.fillText(line.trim(), x, y + (index * lineHeight));
+            });
+            
+            return lines.length * lineHeight;
+        }
+        
+        // Draw background grid
+        function drawGrid() {
+            // Vertical grid lines for quarters
+            for (let i = 0; i <= numQuarters; i++) {
+                const x = leftColumnWidth + (i * quarterWidth);
+                ctx.beginPath();
+                ctx.moveTo(x, phaseHeaderHeight);
+                ctx.lineTo(x, canvas.height - margin);
+                ctx.strokeStyle = colors.gridLine;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+            
+            // Horizontal grid lines for rows
+            let y = phaseHeaderHeight;
+            while (y < canvas.height - margin) {
+                ctx.beginPath();
+                ctx.moveTo(leftColumnWidth, y);
+                ctx.lineTo(leftColumnWidth + gridWidth, y);
+                ctx.strokeStyle = colors.gridLine;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                
+                y += rowHeight;
+            }
+        }
+        
+        // Draw phase headers
+        function drawPhaseHeaders() {
+            // Phase background rectangles
+            const phases = [
+                { name: "PHASE 1", description: "Develop data foundation – 2023", width: 2 },
+                { name: "PHASE 2", description: "Transform key domains and build data capabilities – 2024", width: 4 },
+                { name: "PHASE 3", description: "Scale impact – 2025", width: 2 }
+            ];
+            
+            let xOffset = leftColumnWidth;
+            
+            phases.forEach(phase => {
+                const phaseWidth = phase.width * quarterWidth;
+                
+                // Background
+                ctx.fillStyle = colors.headerBg;
+                ctx.fillRect(xOffset, 0, phaseWidth, phaseHeaderHeight);
+                
+                // Border
+                ctx.strokeStyle = '#999';
+                ctx.lineWidth = 1;
+                ctx.strokeRect(xOffset, 0, phaseWidth, phaseHeaderHeight);
+                
+                // Phase name
+                ctx.font = fonts.header;
+                ctx.fillStyle = colors.text;
+                ctx.textAlign = 'center';
+                ctx.fillText(phase.name, xOffset + phaseWidth/2, 20);
+                
+                // Phase description in italics
+                ctx.font = '12px Arial';
+                ctx.fillStyle = colors.phaseHeader;
+                ctx.textAlign = 'center';
+                ctx.fillText(phase.description, xOffset + phaseWidth/2, 40);
+                
+                xOffset += phaseWidth;
+            });
+            
+            // Draw quarter labels
+            const quarters = ['Q3', 'Q4', 'Q1', 'Q2', 'Q3', 'Q4', 'Q1', 'Q2'];
+            
+            quarters.forEach((quarter, index) => {
+                const x = leftColumnWidth + (index * quarterWidth) + quarterWidth/2;
+                ctx.font = fonts.normal;
+                ctx.fillStyle = colors.text;
+                ctx.textAlign = 'center';
+                ctx.fillText(quarter, x, 65);
+            });
+        }
+        
+        // Draw section headers
+        function drawSectionHeaders() {
+            const sections = [
+                { name: "FOUNDATIONAL CAPABILITIES", y: 100 },
+                { name: "DOMAINS", y: 340 },
+                { name: "CHANGE MANAGEMENT", y: 660 },
+                { name: "FINANCIALS", y: 780 }
+            ];
+            
+            sections.forEach(section => {
+                // Background rectangle
+                ctx.fillStyle = '#fff';
+                ctx.fillRect(0, section.y, leftColumnWidth, rowHeight);
+                
+                // Border
+                ctx.strokeStyle = colors.text;
+                ctx.lineWidth = 1;
+                ctx.strokeRect(0, section.y, leftColumnWidth, rowHeight);
+                
+                // Text
+                ctx.font = fonts.header;
+                ctx.fillStyle = colors.text;
+                ctx.textAlign = 'left';
+                ctx.fillText(section.name, 10, section.y + 20);
+            });
+        }
+        
+        // Draw timeline bars for items
+        function drawTimelineItem(text, y, startQ, endQ, phases) {
+            // Draw item text
+            ctx.font = fonts.normal;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'right';
+            drawWrappedText(text, leftColumnWidth - 10, y + 12, leftColumnWidth - 20, 14, fonts.normal, 'right');
+            
+            // Draw timeline bars
+            phases.forEach(phase => {
+                const startX = leftColumnWidth + startQ * quarterWidth;
+                const width = (phase.end - phase.start) * quarterWidth;
+                
+                ctx.fillStyle = getPhaseColor(phase.type);
+                ctx.fillRect(startX + phase.start * quarterWidth, y, width, rowHeight);
+                
+                // Add border
+                ctx.strokeStyle = "#999";
+                ctx.lineWidth = 1;
+                ctx.strokeRect(startX + phase.start * quarterWidth, y, width, rowHeight);
+                
+                // Add text if it's a DESIGN phase
+                if (phase.type === 'DESIGN') {
+                    ctx.font = fonts.small;
+                    ctx.fillStyle = '#555';
+                    ctx.textAlign = 'center';
+                    ctx.fillText("DESIGN", startX + phase.start * quarterWidth + width/2, y + rowHeight/2 + 4);
+                }
+            });
+        }
+        
+        function getPhaseColor(phaseType) {
+            switch(phaseType) {
+                case 'DESIGN': return colors.designPhase;
+                case 'DISCOVERY': return colors.discoveryPhase;
+                case 'PROOF': return colors.proofOfConceptPhase;
+                case 'PRODUCTION': return colors.productionPhase;
+                default: return "#ccc";
+            }
+        }
+        
+        // Draw financial metrics
+        function drawFinancials() {
+            const revenues = [null, null, "3", "15", "27", "45", "63", "82"];
+            const investments = ["5", "8", "12", "10", "10", "8", "8", "8"];
+            const cashflow = ["-5", "-8", "-12", "-7", "+5", "+19", "+37", "+55"];
+            
+            let y = 780 + rowHeight;
+            
+            // Revenue improvement
+            drawFinancialRow("Revenue improvement (%)", y, revenues);
+            y += rowHeight;
+            
+            // Cash investments
+            drawFinancialRow("Cash investments (HKD mil)", y, investments);
+            y += rowHeight;
+            
+            // Net cash
+            drawFinancialRow("Net cash (HKD mil)", y, cashflow);
+        }
+        
+        function drawFinancialRow(label, y, values) {
+            // Draw label
+            ctx.font = fonts.normal;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'right';
+            ctx.fillText(label, leftColumnWidth - 10, y + 20);
+            
+            // Draw values
+            values.forEach((value, index) => {
+                if (value) {
+                    const x = leftColumnWidth + (index * quarterWidth) + quarterWidth/2;
+                    ctx.font = fonts.normal;
+                    ctx.fillStyle = colors.text;
+                    ctx.textAlign = 'center';
+                    ctx.fillText(value, x, y + 20);
+                }
+            });
+        }
+        
+        // Draw legend
+        function drawLegend() {
+            const legendX = leftColumnWidth + 20;
+            const legendY = 130;
+            const legendWidth = 180;
+            const legendHeight = 100;
+            const swatchSize = 20;
+            
+            // Background
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(legendX, legendY, legendWidth, legendHeight);
+            ctx.strokeStyle = "#999";
+            ctx.lineWidth = 1;
+            ctx.strokeRect(legendX, legendY, legendWidth, legendHeight);
+            
+            // Legend items
+            const legendItems = [
+                { color: colors.discoveryPhase, label: "Discovery" },
+                { color: colors.proofOfConceptPhase, label: "Proof of concept/MVP" },
+                { color: colors.productionPhase, label: "Production solution" }
+            ];
+            
+            legendItems.forEach((item, index) => {
+                const y = legendY + 20 + (index * 25);
+                
+                // Color swatch
+                ctx.fillStyle = item.color;
+                ctx.fillRect(legendX + 15, y, swatchSize, swatchSize);
+                ctx.strokeStyle = "#999";
+                ctx.lineWidth = 1;
+                ctx.strokeRect(legendX + 15, y, swatchSize, swatchSize);
+                
+                // Label
+                ctx.font = fonts.normal;
+                ctx.fillStyle = colors.text;
+                ctx.textAlign = 'left';
+                ctx.fillText(item.label, legendX + 50, y + 15);
+            });
+        }
+        
+        // Title at the top
+        function drawTitle() {
+            ctx.font = 'bold 20px Arial';
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'left';
+            ctx.fillText("Strategic roadmap for data transformation", 0, 30);
+            
+            ctx.font = fonts.normal;
+            ctx.fillStyle = colors.text;
+            ctx.fillText("For Hong Kong's largest cha chaan teng chain", 0, 50);
+        }
+        
+        // Main drawing function
+        function drawRoadmap() {
+            // Clear canvas
+            ctx.fillStyle = colors.background;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw title
+            drawTitle();
+            
+            // Draw grid lines
+            drawGrid();
+            
+            // Draw phase headers
+            drawPhaseHeaders();
+            
+            // Draw section headers
+            drawSectionHeaders();
+            
+            // Draw legend
+            drawLegend();
+            
+            // Foundational capabilities items
+            let y = 100 + rowHeight;
+            
+            drawTimelineItem("Data strategy & roadmap", y, 0, 1, [
+                { type: 'DESIGN', start: 0, end: 1 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Data talent buildout", y, 0, 8, [
+                { type: 'DESIGN', start: 1, end: 2 },
+                { type: 'PRODUCTION', start: 2, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Data team training", y, 0, 4, [
+                { type: 'DESIGN', start: 1, end: 2 },
+                { type: 'PRODUCTION', start: 2, end: 4 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Operating model: Design and implement Data CoE", y, 0, 3, [
+                { type: 'DESIGN', start: 2, end: 3 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Technology: Cloud data platform", y, 0, 8, [
+                { type: 'DESIGN', start: 1, end: 2 },
+                { type: 'PRODUCTION', start: 2, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Data: Architecture and ingestion", y, 0, 5, [
+                { type: 'DESIGN', start: 1, end: 2 },
+                { type: 'PRODUCTION', start: 2, end: 5 }
+            ]);
+            y += rowHeight;
+            
+            // Domain: Customer Experience
+            y = 340 + rowHeight;
+            ctx.font = fonts.subheader;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'left';
+            ctx.fillText("CUSTOMER EXPERIENCE", 10, y);
+            y += rowHeight;
+            
+            drawTimelineItem("Build customer 360 data view", y, 0, 8, [
+                { type: 'DISCOVERY', start: 1, end: 2 },
+                { type: 'PROOF', start: 2, end: 3 },
+                { type: 'PRODUCTION', start: 3, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Personalized marketing & loyalty program", y, 0, 8, [
+                { type: 'DISCOVERY', start: 2, end: 3 },
+                { type: 'PROOF', start: 3, end: 4 },
+                { type: 'PRODUCTION', start: 4, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            // Domain: Menu Management
+            y += 10;
+            ctx.font = fonts.subheader;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'left';
+            ctx.fillText("MENU MANAGEMENT", 10, y);
+            y += rowHeight;
+            
+            drawTimelineItem("Menu performance analytics", y, 0, 8, [
+                { type: 'DISCOVERY', start: 1, end: 2 },
+                { type: 'PROOF', start: 2, end: 3 },
+                { type: 'PRODUCTION', start: 3, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Pricing optimization model", y, 0, 8, [
+                { type: 'DISCOVERY', start: 2, end: 3 },
+                { type: 'PROOF', start: 3, end: 4 },
+                { type: 'PRODUCTION', start: 4, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            // Domain: Supply Chain
+            y += 10;
+            ctx.font = fonts.subheader;
+            ctx.fillStyle = colors.text;
+            ctx.textAlign = 'left';
+            ctx.fillText("SUPPLY CHAIN", 10, y);
+            y += rowHeight;
+            
+            drawTimelineItem("Inventory optimization", y, 0, 8, [
+                { type: 'DISCOVERY', start: 3, end: 4 },
+                { type: 'PROOF', start: 4, end: 5 },
+                { type: 'PRODUCTION', start: 5, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Demand forecasting model", y, 0, 8, [
+                { type: 'DISCOVERY', start: 4, end: 5 },
+                { type: 'PROOF', start: 5, end: 6 },
+                { type: 'PRODUCTION', start: 6, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            // Change Management
+            y = 660 + rowHeight;
+            
+            drawTimelineItem("Communication and engagement", y, 0, 8, [
+                { type: 'PRODUCTION', start: 0, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Milestone and value tracking", y, 0, 8, [
+                { type: 'PRODUCTION', start: 0, end: 8 }
+            ]);
+            y += rowHeight;
+            
+            drawTimelineItem("Risk management", y, 0, 8, [
+                { type: 'PRODUCTION', start: 2, end: 8 }
+            ]);
+            
+            // Financial metrics
+            drawFinancials();
+        }
+        
+        // Run the drawing
+        drawRoadmap();
+    });
+</script>
