@@ -1,0 +1,1318 @@
+<section id="data-project-framework">
+    <h2>Data Project Framework: Scaling Governance to Project Types</h2>
+    
+    <div class="intro-section">
+        <p>After establishing our data lake foundation, we need a clear framework for classifying and managing different types of data projects. Our organization will undertake initiatives ranging from strategic, enterprise-wide transformations to routine operational reporting tasks. Each requires different levels of governance, stakeholder involvement, and DCoE support to succeed.</p>
+    </div>
+    
+    <div class="project-types-section">
+        <h3>Three Types of Data Projects</h3>
+        
+        <div class="project-types-cards">
+            <div class="project-card transformative">
+                <div class="project-header">
+                    <h4>Type 1: Transformative Projects</h4>
+                    <div class="timeline">12-18 months</div>
+                </div>
+                <div class="project-body">
+                    <p><strong>Description:</strong> Strategic, enterprise-wide initiatives that fundamentally change how the organization operates with data.</p>
+                    <p><strong>Examples:</strong></p>
+                    <ul>
+                        <li>Implementation of enterprise-wide data lake</li>
+                        <li>Integrated inventory management platform</li>
+                        <li>Customer 360° view across all touchpoints</li>
+                    </ul>
+                    <p><strong>End Users:</strong> Multiple internal departments, potentially external customers</p>
+                    <p><strong>Governance:</strong> Formal with steering committee and stage-gate approach</p>
+                </div>
+            </div>
+            
+            <div class="project-card cross-departmental">
+                <div class="project-header">
+                    <h4>Type 2: Cross-Departmental Projects</h4>
+                    <div class="timeline">3-4 months</div>
+                </div>
+                <div class="project-body">
+                    <p><strong>Description:</strong> Tactical initiatives spanning multiple business units with focused scope.</p>
+                    <p><strong>Examples:</strong></p>
+                    <ul>
+                        <li>Seasonal menu optimization (Operations + Marketing)</li>
+                        <li>Supplier performance analytics (Procurement + Finance)</li>
+                        <li>Store traffic analysis (Operations + Sales)</li>
+                    </ul>
+                    <p><strong>End Users:</strong> 2-3 internal departments</p>
+                    <p><strong>Governance:</strong> Semi-formal with lightweight approvals and weekly reviews</p>
+                </div>
+            </div>
+            
+            <div class="project-card operational">
+                <div class="project-header">
+                    <h4>Type 3: Operational Data Tasks</h4>
+                    <div class="timeline">Ongoing/Recurring</div>
+                </div>
+                <div class="project-body">
+                    <p><strong>Description:</strong> Regular, recurring activities supporting day-to-day business operations.</p>
+                    <p><strong>Examples:</strong></p>
+                    <ul>
+                        <li>Daily/weekly inventory dashboards</li>
+                        <li>Monthly financial reports</li>
+                        <li>Regular customer behavior insights</li>
+                    </ul>
+                    <p><strong>End Users:</strong> Specific department or functional team</p>
+                    <p><strong>Governance:</strong> Minimal with standard templates and automated quality checks</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="stakeholder-involvement-section">
+        <h3>Stakeholder Participation Across Project Types</h3>
+        
+        <div class="table-container">
+            <table class="stakeholder-table">
+                <thead>
+                    <tr>
+                        <th>Role/Aspect</th>
+                        <th>Type 1: Transformative</th>
+                        <th>Type 2: Cross-Departmental</th>
+                        <th>Type 3: Operational</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>DCoE Lead</strong></td>
+                        <td>
+                            <div class="involvement very-high">Very High (30-50%)</div>
+                            <ul>
+                                <li>Strategic planning</li>
+                                <li>Governance framework</li>
+                                <li>Architecture oversight</li>
+                                <li>ROI validation</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement medium">Medium (10-20%)</div>
+                            <ul>
+                                <li>Initial setup</li>
+                                <li>Methodology guidance</li>
+                                <li>Technical direction</li>
+                                <li>Periodic reviews</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement low">Low (5-10%)</div>
+                            <ul>
+                                <li>Template development</li>
+                                <li>Quality assurance</li>
+                                <li>Process improvement</li>
+                                <li>Prioritization</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Architect</strong></td>
+                        <td>
+                            <div class="involvement very-high">Very High</div>
+                            <ul>
+                                <li>Enterprise data modeling</li>
+                                <li>Integration patterns</li>
+                                <li>Scalability planning</li>
+                                <li>Technical standards</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement high">High</div>
+                            <ul>
+                                <li>Solution architecture</li>
+                                <li>Data model design</li>
+                                <li>Integration support</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement low">Low</div>
+                            <ul>
+                                <li>Standards adherence</li>
+                                <li>Template creation</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Governance Lead</strong></td>
+                        <td>
+                            <div class="involvement very-high">Very High</div>
+                            <ul>
+                                <li>Policy development</li>
+                                <li>Data quality framework</li>
+                                <li>Compliance oversight</li>
+                                <li>Master data standards</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement high">High</div>
+                            <ul>
+                                <li>Data classification</li>
+                                <li>Quality monitoring</li>
+                                <li>Access management</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement medium">Medium</div>
+                            <ul>
+                                <li>Process enforcement</li>
+                                <li>Data quality checks</li>
+                                <li>Documentation</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Business Value Manager</strong></td>
+                        <td>
+                            <div class="involvement high">High</div>
+                            <ul>
+                                <li>Business case development</li>
+                                <li>Value tracking</li>
+                                <li>Executive communication</li>
+                                <li>Benefit realization</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement medium">Medium</div>
+                            <ul>
+                                <li>Use case prioritization</li>
+                                <li>Value measurement</li>
+                                <li>Success criteria</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement low">Low</div>
+                            <ul>
+                                <li>Periodic value review</li>
+                                <li>ROI tracking</li>
+                                <li>Optimization suggestions</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical Implementation Lead</strong></td>
+                        <td>
+                            <div class="involvement very-high">Very High</div>
+                            <ul>
+                                <li>Platform implementation</li>
+                                <li>Integration strategy</li>
+                                <li>Vendor management</li>
+                                <li>Technical delivery</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement medium">Medium</div>
+                            <ul>
+                                <li>Technical setup</li>
+                                <li>Tool selection</li>
+                                <li>Infrastructure scaling</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement low">Low</div>
+                            <ul>
+                                <li>Platform maintenance</li>
+                                <li>Technical support</li>
+                                <li>Environment management</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Executive Sponsor</strong></td>
+                        <td>
+                            <div class="involvement high">High</div>
+                            <ul>
+                                <li>Strategic alignment</li>
+                                <li>Resource allocation</li>
+                                <li>Organizational change</li>
+                                <li>Barrier removal</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement medium">Medium</div>
+                            <ul>
+                                <li>Department alignment</li>
+                                <li>Periodic reviews</li>
+                                <li>Resource approval</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement very-low">Very Low</div>
+                            <ul>
+                                <li>Exception handling</li>
+                                <li>Quarterly reviews</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Business Domain Experts</strong></td>
+                        <td>
+                            <div class="involvement high">High</div>
+                            <ul>
+                                <li>Requirements definition</li>
+                                <li>Process redesign</li>
+                                <li>User acceptance testing</li>
+                                <li>Change management</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement very-high">Very High</div>
+                            <ul>
+                                <li>Detailed requirements</li>
+                                <li>Daily/weekly collaboration</li>
+                                <li>Testing & validation</li>
+                                <li>Domain-specific rules</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="involvement very-high">Very High</div>
+                            <ul>
+                                <li>Daily interaction</li>
+                                <li>Feedback cycles</li>
+                                <li>Content validation</li>
+                                <li>Insight application</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primary Risk Areas</strong></td>
+                        <td>
+                            <ul>
+                                <li>Strategic misalignment</li>
+                                <li>Resource adequacy</li>
+                                <li>Technical complexity</li>
+                                <li>Change resistance</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Cross-department coordination</li>
+                                <li>Resource competition</li>
+                                <li>Integration challenges</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Data quality erosion</li>
+                                <li>Process compliance</li>
+                                <li>Tool reliability</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+<div class="development-approach-section">
+    <h3>Data Product Development Approach</h3>
+    
+    <p>We recommend adapting the industry-standard "6S" data product development framework for all project types. This approach provides a structured methodology that scales from complex transformative initiatives to routine operational tasks, ensuring consistency while allowing for appropriate flexibility.</p>
+    
+    <div class="development-approaches">
+        <div class="approach-tabs">
+            <button class="approach-tab active" onclick="switchApproach('type1')">Type 1 Transformative</button>
+            <button class="approach-tab" onclick="switchApproach('type2')">Type 2 Cross-Departmental</button>
+            <button class="approach-tab" onclick="switchApproach('type3')">Type 3 Operational</button>
+        </div>
+        
+        <div class="approach-content active" id="type1Approach">
+            <h4>6S Approach for Transformative Projects (Type 1)</h4>
+            <div class="approach-diagram">
+                <div id="type1DiagramContainer" class="diagram-container"></div>
+            </div>
+            <div class="approach-details">
+                <div class="approach-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h5>Scoping</h5>
+                        <p><strong>Focus:</strong> Comprehensive enterprise scoping with executive alignment</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Executive workshops to identify strategic objectives</li>
+                            <li>Cross-functional value assessment</li>
+                            <li>Current state analysis across all affected domains</li>
+                            <li>Vision development with 2-3 year horizon</li>
+                            <li>Resource planning for extended implementation</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Very High</p>
+                        <p><strong>Deliverables:</strong> Strategic roadmap, Value case, Resource plan, Timeline</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h5>Selecting</h5>
+                        <p><strong>Focus:</strong> Enterprise-wide data selection with future-proofing</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Enterprise data mapping across all systems</li>
+                            <li>Data prioritization based on strategic value</li>
+                            <li>Technical debt assessment</li>
+                            <li>Data lineage documentation</li>
+                            <li>Long-term data retention planning</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Very High</p>
+                        <p><strong>Deliverables:</strong> Enterprise data catalog, Data dictionary, Metadata strategy</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h5>Sourcing</h5>
+                        <p><strong>Focus:</strong> Comprehensive data acquisition from diverse sources</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Data profiling across all source systems</li>
+                            <li>Quality assessment with detailed metrics</li>
+                            <li>ETL/ELT pipeline development for multiple sources</li>
+                            <li>Master data management implementation</li>
+                            <li>Data reconciliation procedures</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> High</p>
+                        <p><strong>Deliverables:</strong> Data quality framework, ETL/ELT architecture, Integration patterns</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h5>Structuring</h5>
+                        <p><strong>Focus:</strong> Enterprise data architecture with flexibility for future needs</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Enterprise data modeling (conceptual, logical, physical)</li>
+                            <li>Multi-layer data architecture (raw, standardized, consumption)</li>
+                            <li>Data governance framework implementation</li>
+                            <li>Scalable storage solutions</li>
+                            <li>Performance optimization for diverse use cases</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Very High</p>
+                        <p><strong>Deliverables:</strong> Enterprise data model, Technical architecture, Governance framework</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h5>Sharing</h5>
+                        <p><strong>Focus:</strong> Multi-channel delivery platform for enterprise insights</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Self-service analytics platform development</li>
+                            <li>Enterprise dashboard framework</li>
+                            <li>API strategy for internal/external consumption</li>
+                            <li>Data visualization standards</li>
+                            <li>Training program for business users</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> High</p>
+                        <p><strong>Deliverables:</strong> Analytics platform, Visualization library, Data API catalog</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h5>Steering</h5>
+                        <p><strong>Focus:</strong> Enterprise governance structure and continuous enhancement</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Data governance council establishment</li>
+                            <li>KPI framework for ongoing evaluation</li>
+                            <li>Operating model for data management</li>
+                            <li>Long-term staffing and capability building</li>
+                            <li>Business adoption program</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Very High</p>
+                        <p><strong>Deliverables:</strong> Governance procedures, RACI matrix, Enhancement roadmap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="approach-content" id="type2Approach">
+            <h4>6S Approach for Cross-Departmental Projects (Type 2)</h4>
+            <div class="approach-diagram">
+                <div id="type2DiagramContainer" class="diagram-container"></div>
+            </div>
+            <div class="approach-details">
+                <div class="approach-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h5>Scoping</h5>
+                        <p><strong>Focus:</strong> Department-level scoping with key stakeholders</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Department leader workshops (2-3 departments)</li>
+                            <li>Business case development for specific pain points</li>
+                            <li>Prioritization of business requirements</li>
+                            <li>3-4 month implementation planning</li>
+                            <li>Success metrics definition</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Medium</p>
+                        <p><strong>Deliverables:</strong> Project charter, Requirements document, Success criteria</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h5>Selecting</h5>
+                        <p><strong>Focus:</strong> Targeted data selection from relevant systems</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Data mapping focused on 2-3 key systems</li>
+                            <li>Identification of critical data elements</li>
+                            <li>Relevant historical data assessment</li>
+                            <li>Gap analysis for required data elements</li>
+                            <li>Reuse of existing enterprise data assets</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Medium</p>
+                        <p><strong>Deliverables:</strong> Data inventory, Gap analysis, Source mapping</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h5>Sourcing</h5>
+                        <p><strong>Focus:</strong> Efficient data acquisition from departmental systems</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Targeted data profiling</li>
+                            <li>Department-specific quality rules</li>
+                            <li>Leveraging existing data pipelines</li>
+                            <li>Department data steward engagement</li>
+                            <li>Data reconciliation between departments</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Medium</p>
+                        <p><strong>Deliverables:</strong> Data quality assessment, ETL workflow, Quality rules</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h5>Structuring</h5>
+                        <p><strong>Focus:</strong> Solution-specific data model aligned with enterprise standards</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Solution-specific data modeling</li>
+                            <li>Alignment with enterprise data models</li>
+                            <li>Performance optimization for specific use cases</li>
+                            <li>Implementation of departmental business rules</li>
+                            <li>Data quality controls for critical metrics</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Medium</p>
+                        <p><strong>Deliverables:</strong> Solution data model, Business rules documentation</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h5>Sharing</h5>
+                        <p><strong>Focus:</strong> Department-specific insights with cross-functional relevance</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Department dashboard development</li>
+                            <li>Cross-functional reporting views</li>
+                            <li>Scheduled data delivery setup</li>
+                            <li>Role-based access implementation</li>
+                            <li>Training for department users</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Low</p>
+                        <p><strong>Deliverables:</strong> Department dashboards, Cross-functional reports, Training guide</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h5>Steering</h5>
+                        <p><strong>Focus:</strong> Project-specific governance with departmental ownership</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Department data owners assignment</li>
+                            <li>Cross-functional coordination process</li>
+                            <li>Weekly project status reviews</li>
+                            <li>Value tracking against success metrics</li>
+                            <li>Knowledge transfer to operational teams</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Low</p>
+                        <p><strong>Deliverables:</strong> Project RACI, Operational handover plan, Value realization report</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="approach-content" id="type3Approach">
+            <h4>6S Approach for Operational Data Tasks (Type 3)</h4>
+            <div class="approach-diagram">
+                <div id="type3DiagramContainer" class="diagram-container"></div>
+            </div>
+            <div class="approach-details">
+                <div class="approach-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h5>Scoping</h5>
+                        <p><strong>Focus:</strong> Template-based scope definition for recurring needs</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Standard requirements template completion</li>
+                            <li>Business purpose documentation</li>
+                            <li>Identification of data consumers</li>
+                            <li>Frequency and timing requirements</li>
+                            <li>Categorization of information needs</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Very Low</p>
+                        <p><strong>Deliverables:</strong> Requirements form, User list, Delivery schedule</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h5>Selecting</h5>
+                        <p><strong>Focus:</strong> Standard data sets with predefined elements</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Selection from standard data catalog</li>
+                            <li>Confirmation of data availability</li>
+                            <li>Identification of relevant time periods</li>
+                            <li>Filter and parameter specification</li>
+                            <li>Data element inclusion/exclusion</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> None</p>
+                        <p><strong>Deliverables:</strong> Data specification, Parameter configuration</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h5>Sourcing</h5>
+                        <p><strong>Focus:</strong> Automated data collection from established sources</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Use of predefined data connectors</li>
+                            <li>Scheduled data refresh setup</li>
+                            <li>Standard data quality checks</li>
+                            <li>Exception handling configuration</li>
+                            <li>Alert thresholds for data issues</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> None</p>
+                        <p><strong>Deliverables:</strong> Refresh schedule, Quality check configuration, Alert setup</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h5>Structuring</h5>
+                        <p><strong>Focus:</strong> Use of predefined data structures and patterns</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Selection of standard data model template</li>
+                            <li>Application of department-specific business rules</li>
+                            <li>Configuration of calculation logic</li>
+                            <li>Utilization of standard dimensions/hierarchies</li>
+                            <li>Implementation of common aggregations</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Very Low</p>
+                        <p><strong>Deliverables:</strong> Data structure configuration, Calculation definitions</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h5>Sharing</h5>
+                        <p><strong>Focus:</strong> Regular production of standard outputs</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Use of standard dashboard templates</li>
+                            <li>Scheduled report distribution</li>
+                            <li>User access management</li>
+                            <li>Export format configuration</li>
+                            <li>Notification setup for data consumers</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Very Low</p>
+                        <p><strong>Deliverables:</strong> Operational dashboard, Scheduled reports, Distribution list</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h5>Steering</h5>
+                        <p><strong>Focus:</strong> Standard operating procedures for ongoing maintenance</p>
+                        <p><strong>Activities:</strong></p>
+                        <ul>
+                            <li>Department data owner assignment</li>
+                            <li>Data quality monitoring</li>
+                            <li>Standard review cycles</li>
+                            <li>Issue resolution process</li>
+                            <li>User feedback collection</li>
+                        </ul>
+                        <p><strong>DCoE Involvement:</strong> Very Low</p>
+                        <p><strong>Deliverables:</strong> Operational procedures, Support process, Feedback mechanism</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>      
+      
+  
+    
+    <div class="implementation-summary">
+        <h3>Implementation Guide: Selecting the Right Approach</h3>
+        
+        <p>By tailoring our approach to each type of data project, we ensure appropriate governance while avoiding unnecessary overhead. This framework allows us to:</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit">
+                <div class="benefit-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="benefit-content">
+                    <h4>Balance Governance with Agility</h4>
+                    <p>Apply appropriate controls based on project impact, risk, and scope without creating unnecessary bureaucracy</p>
+                </div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="benefit-content">
+                    <h4>Scale Resource Allocation</h4>
+                    <p>Direct our limited technical resources to where they add the most value while enabling self-service for routine tasks</p>
+                </div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <div class="benefit-content">
+                    <h4>Create Clear Expectations</h4>
+                    <p>Help business stakeholders understand their involvement requirements for different types of initiatives</p>
+                </div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="benefit-content">
+                    <h4>Build Organizational Capability</h4>
+                    <p>Progressively develop data literacy and self-service skills across the organization</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="next-steps">
+            <h4>Recommended Next Steps</h4>
+            <ol>
+                <li>Formalize this project classification framework and obtain executive approval</li>
+                <li>Develop detailed templates for each project type to streamline initiation</li>
+                <li>Create a data project intake process that routes initiatives to the appropriate track</li>
+                <li>Train the DCoE team on the different approaches for each project type</li>
+                <li>Pilot the framework with 1-2 projects of each type to refine the process</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<style>
+    #data-project-framework {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    
+    h3 {
+        color: #2c3e50;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    
+    h4 {
+        color: #3498db;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    
+    h5 {
+        color: #2c3e50;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .intro-section {
+        margin-bottom: 30px;
+    }
+    
+    .project-types-section, .stakeholder-involvement-section, .development-approach-section, .implementation-summary {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    /* Project Type Cards */
+    .project-types-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .project-card {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .project-header {
+        padding: 15px 20px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .transformative .project-header {
+        background-color: #3498db;
+    }
+    
+    .cross-departmental .project-header {
+        background-color: #2980b9;
+    }
+    
+    .operational .project-header {
+        background-color: #1a5276;
+    }
+    
+    .project-header h4 {
+        margin: 0;
+        color: white;
+    }
+    
+    .timeline {
+        background-color: rgba(255,255,255,0.2);
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+    
+    .project-body {
+        padding: 20px;
+        background-color: #f8f9fa;
+    }
+    
+    .project-body p {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    
+    .project-body ul {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+    }
+    
+    /* Stakeholder Table */
+    .table-container {
+        margin-top: 30px;
+        overflow-x: auto;
+    }
+    
+    .stakeholder-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .stakeholder-table th {
+        background-color: #2c3e50;
+        color: white;
+        padding: 15px;
+        text-align: left;
+    }
+    
+    .stakeholder-table th:first-child {
+        width: 150px;
+    }
+    
+    .stakeholder-table td {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        vertical-align: top;
+    }
+    
+    .stakeholder-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    
+    .stakeholder-table ul {
+        margin: 5px 0 0 0;
+        padding-left: 20px;
+    }
+    
+    .involvement {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 15px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .very-high {
+        background-color: #2980b9;
+    }
+    
+    .high {
+        background-color: #3498db;
+    }
+    
+    .medium {
+        background-color: #5dade2;
+    }
+    
+    .low {
+        background-color: #85c1e9;
+    }
+    
+    .very-low {
+        background-color: #aed6f1;
+    }
+    
+    /* Development Approach Section */
+    .approach-tabs {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+    
+    .approach-tab {
+        padding: 10px 20px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        margin-right: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #555;
+    }
+    
+    .approach-tab.active {
+        background-color: #3498db;
+        color: white;
+        border-color: #3498db;
+    }
+    
+    .approach-content {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-top: none;
+        background-color: #fff;
+    }
+    
+    .approach-content.active {
+        display: block;
+    }
+    
+    .approach-diagram {
+        background-color: #f8f9fa;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+    
+    canvas {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .approach-details {
+        margin-top: 30px;
+    }
+    
+    .approach-step {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+    
+    .step-content {
+        flex-grow: 1;
+    }
+    
+    .step-content h5 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #3498db;
+    }
+    
+    .step-content p {
+        margin: 5px 0;
+    }
+    
+    .step-content ul {
+        margin: 5px 0;
+        padding-left: 20px;
+    }
+    
+    /* Benefits Grid */
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+    }
+    
+    .benefit {
+        display: flex;
+        align-items: flex-start;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .benefit-icon {
+        width: 50px;
+        height: 50px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+    
+    .benefit-content {
+        flex-grow: 1;
+    }
+    
+    .benefit-content h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    
+    .benefit-content p {
+        margin: 0;
+    }
+    
+    .next-steps {
+        background-color: #f0f7fa;
+        border-radius: 8px;
+        padding: 20px 30px;
+        margin-top: 30px;
+    }
+    
+    .next-steps h4 {
+        margin-top: 0;
+    }
+    
+    .next-steps ol {
+        margin: 15px 0 0 0;
+        padding-left: 20px;
+    }
+    
+    .next-steps li {
+        margin-bottom: 10px;
+    }
+    
+    /* For FontAwesome placeholders */
+    .fas {
+        font-family: Arial, sans-serif;
+    }
+    .fa-balance-scale:before { content: "⚖️"; }
+    .fa-project-diagram:before { content: "📊"; }
+    .fa-sitemap:before { content: "🔄"; }
+    .fa-graduation-cap:before { content: "🎓"; }
+    
+    @media (max-width: 768px) {
+        .project-types-cards {
+            grid-template-columns: 1fr;
+        }
+        
+        .benefits-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .approach-step {
+            flex-direction: column;
+        }
+        
+        .step-number {
+            margin-bottom: 15px;
+        }
+    }
+
+    /* Additional styling for the reworked section */
+    .diagram-container {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .diagram-svg {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+  
+<script>
+    // Updated script for the data product development approach diagrams
+    function switchApproach(type) {
+        // Hide all approach contents
+        document.querySelectorAll('.approach-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Remove active class from all tabs
+        document.querySelectorAll('.approach-tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        
+        // Show selected approach content
+        document.getElementById(type + 'Approach').classList.add('active');
+        
+        // Set active class on clicked tab
+        event.target.classList.add('active');
+    }
+
+    // Function to create SVG element
+    function createSVGElement(type, attributes = {}) {
+        const ns = "http://www.w3.org/2000/svg";
+        const element = document.createElementNS(ns, type);
+        
+        for (const [key, value] of Object.entries(attributes)) {
+            element.setAttribute(key, value);
+        }
+        
+        return element;
+    }
+
+    // Function to add text to an SVG element
+    function addSVGText(svg, x, y, text, attributes = {}) {
+        const textElement = createSVGElement('text', {
+            x: x,
+            y: y,
+            ...attributes
+        });
+        
+        textElement.textContent = text;
+        svg.appendChild(textElement);
+        
+        return textElement;
+    }
+
+    // Function to draw the 6S diagram
+    function draw6SDiagram(containerId, color, title, subtitle) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        
+        // Clear any existing content
+        container.innerHTML = '';
+        
+        // Create SVG element
+        const svg = createSVGElement('svg', {
+            class: 'diagram-svg',
+            viewBox: '0 0 800 400'
+        });
+        
+        container.appendChild(svg);
+        
+        // Add title
+        addSVGText(svg, 400, 40, title, {
+            'font-size': '24px',
+            'font-weight': 'bold',
+            'text-anchor': 'middle',
+            'fill': '#2c3e50'
+        });
+        
+        // Add subtitle
+        addSVGText(svg, 400, 70, subtitle, {
+            'font-size': '16px',
+            'font-style': 'italic',
+            'text-anchor': 'middle',
+            'fill': '#666'
+        });
+        
+        // Add "6S" data product recipe text
+        addSVGText(svg, 50, 100, '"6S" data product recipe', {
+            'font-size': '18px',
+            'font-weight': 'bold',
+            'fill': '#333'
+        });
+        
+        // Draw S-shaped path
+        const sCurve = createSVGElement('path', {
+            d: 'M 200,200 A 100,100 0 0 1 400,200 A 100,100 0 0 0 600,200 A 100,100 0 0 1 400,300 A 100,100 0 0 0 200,300 Z',
+            fill: color,
+            stroke: 'none'
+        });
+        
+        svg.appendChild(sCurve);
+        
+        // Add inner circle
+        const innerCircle = createSVGElement('circle', {
+            cx: 400,
+            cy: 250,
+            r: 60,
+            fill: 'white'
+        });
+        
+        svg.appendChild(innerCircle);
+        
+        // Add the 6 step circles
+        const steps = [
+            { number: 1, title: "Scoping", desc: "where to focus development", x: 100, y: 300 },
+            { number: 2, title: "Selecting", desc: "the data to curate over time", x: 400, y: 350 },
+            { number: 3, title: "Sourcing", desc: "the data and measuring its current state", x: 700, y: 300 },
+            { number: 4, title: "Structuring", desc: "the data to enable use cases", x: 700, y: 150 },
+            { number: 5, title: "Sharing", desc: "the data and creating reports", x: 100, y: 150 },
+            { number: 6, title: "Steering", desc: "the product by confirming roles", x: 550, y: 200 }
+        ];
+        
+        steps.forEach(step => {
+            // Add step circle
+            const stepCircle = createSVGElement('circle', {
+                cx: step.x,
+                cy: step.y,
+                r: 25,
+                fill: step.number <= 3 ? color : '#3498db'
+            });
+            
+            svg.appendChild(stepCircle);
+            
+            // Add step number
+            addSVGText(svg, step.x, step.y + 7, step.number.toString(), {
+                'font-size': '20px',
+                'font-weight': 'bold',
+                'text-anchor': 'middle',
+                'fill': 'white'
+            });
+            
+            // Add step title
+            let textAnchor, titleX, titleY, descX, descY;
+            
+            if (step.number === 1) {
+                textAnchor = 'start';
+                titleX = step.x - 40;
+                titleY = step.y - 20;
+                descX = step.x - 40;
+                descY = step.y + 5;
+            } else if (step.number === 2) {
+                textAnchor = 'middle';
+                titleX = step.x;
+                titleY = step.y - 40;
+                descX = step.x;
+                descY = step.y - 20;
+            } else if (step.number === 3) {
+                textAnchor = 'end';
+                titleX = step.x + 40;
+                titleY = step.y - 20;
+                descX = step.x + 40;
+                descY = step.y + 5;
+            } else if (step.number === 4) {
+                textAnchor = 'end';
+                titleX = step.x + 40;
+                titleY = step.y - 20;
+                descX = step.x + 40;
+                descY = step.y + 5;
+            } else if (step.number === 5) {
+                textAnchor = 'start';
+                titleX = step.x - 40;
+                titleY = step.y - 20;
+                descX = step.x - 40;
+                descY = step.y + 5;
+            } else {
+                textAnchor = 'middle';
+                titleX = step.x;
+                titleY = step.y + 40;
+                descX = step.x;
+                descY = step.y + 60;
+            }
+            
+            addSVGText(svg, titleX, titleY, step.title, {
+                'font-size': '16px',
+                'font-weight': 'bold',
+                'text-anchor': textAnchor,
+                'fill': '#333'
+            });
+            
+            addSVGText(svg, descX, descY, step.desc, {
+                'font-size': '14px',
+                'text-anchor': textAnchor,
+                'fill': '#555'
+            });
+        });
+        
+        // Add bottom section labels
+        addSVGText(svg, 100, 380, "Upfront planning – \"Sprint 0\"", {
+            'font-size': '14px',
+            'font-weight': 'bold',
+            'fill': '#666'
+        });
+        
+        addSVGText(svg, 400, 380, "Agile sprints to iteratively develop the product", {
+            'font-size': '14px',
+            'font-weight': 'bold',
+            'text-anchor': 'middle',
+            'fill': '#666'
+        });
+        
+        addSVGText(svg, 700, 380, "Develop plan for next release", {
+            'font-size': '14px',
+            'font-weight': 'bold',
+            'text-anchor': 'end',
+            'fill': '#666'
+        });
+    }
+
+    // When the document is loaded, create and draw the diagrams
+    document.addEventListener('DOMContentLoaded', function() {
+        // Draw Type 1 diagram
+        draw6SDiagram('type1DiagramContainer', '#3498db', 'Type 1: Transformative Projects (12-18 months)', 'Very High DCoE Involvement');
+        
+        // Draw Type 2 diagram
+        draw6SDiagram('type2DiagramContainer', '#2980b9', 'Type 2: Cross-Departmental Projects (3-4 months)', 'Medium DCoE Involvement');
+        
+        // Draw Type 3 diagram
+        draw6SDiagram('type3DiagramContainer', '#1a5276', 'Type 3: Operational Data Tasks (Ongoing)', 'Low DCoE Involvement');
+    });
+</script> 
