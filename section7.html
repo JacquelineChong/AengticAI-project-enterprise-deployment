@@ -1,5 +1,5 @@
 <section id="data-project-framework">
-    <h2>Data Project Framework: Scaling Governance to Project Types</h2>
+    <h2>7. Scaling Governance to Different Project Types</h2>
     
     <div class="intro-section">
         <p>After establishing our data lake foundation, we need a clear framework for classifying and managing different types of data projects. Our organization will undertake initiatives ranging from strategic, enterprise-wide transformations to routine operational reporting tasks. Each requires different levels of governance, stakeholder involvement, and DCoE support to succeed.</p>
@@ -165,9 +165,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><strong>Business Value Manager</strong></td>
+                        <td><strong>Business Analyst and Data Champions</strong></td>
                         <td>
-                            <div class="involvement high">High</div>
+                            <div class="involvement very-high">Very High</div>
                             <ul>
                                 <li>Business case development</li>
                                 <li>Value tracking</li>
@@ -176,7 +176,7 @@
                             </ul>
                         </td>
                         <td>
-                            <div class="involvement medium">Medium</div>
+                            <div class="involvement high">High</div>
                             <ul>
                                 <li>Use case prioritization</li>
                                 <li>Value measurement</li>
@@ -309,9 +309,14 @@
     
 
 <div class="development-approach-section">
-    <h3>Data Product Development Approach</h3>
+    <h3>Data Product/ Project Development Approach</h3>
     
-    <p>We recommend adapting the industry-standard "6S" data product development framework for all project types. This approach provides a structured methodology that scales from complex transformative initiatives to routine operational tasks, ensuring consistency while allowing for appropriate flexibility.</p>
+    <p>We recommend adapting a "6S" data product development framework for all project types. This approach provides a structured methodology that scales from complex transformative initiatives to routine operational tasks, ensuring consistency while allowing for appropriate flexibility.</p>
+  
+  <div class="image-container">
+  <img src="https://jacquelinechong.github.io/c25ex005.png" alt="Data product development approach" class="centered-image">
+  <div class="image-caption">Source: Rewired: The McKinsey Guide to Outcompeting in the Age of Digital and AI</div>
+</div>
     
     <div class="development-approaches">
         <div class="approach-tabs">
@@ -322,9 +327,7 @@
         
         <div class="approach-content active" id="type1Approach">
             <h4>6S Approach for Transformative Projects (Type 1)</h4>
-            <div class="approach-diagram">
-                <div id="type1DiagramContainer" class="diagram-container"></div>
-            </div>
+    
             <div class="approach-details">
                 <div class="approach-step">
                     <div class="step-number">1</div>
@@ -433,9 +436,7 @@
         
         <div class="approach-content" id="type2Approach">
             <h4>6S Approach for Cross-Departmental Projects (Type 2)</h4>
-            <div class="approach-diagram">
-                <div id="type2DiagramContainer" class="diagram-container"></div>
-            </div>
+
             <div class="approach-details">
                 <div class="approach-step">
                     <div class="step-number">1</div>
@@ -544,9 +545,6 @@
         
         <div class="approach-content" id="type3Approach">
             <h4>6S Approach for Operational Data Tasks (Type 3)</h4>
-            <div class="approach-diagram">
-                <div id="type3DiagramContainer" class="diagram-container"></div>
-            </div>
             <div class="approach-details">
                 <div class="approach-step">
                     <div class="step-number">1</div>
@@ -657,64 +655,15 @@
       
   
     
-    <div class="implementation-summary">
-        <h3>Implementation Guide: Selecting the Right Approach</h3>
-        
-        <p>By tailoring our approach to each type of data project, we ensure appropriate governance while avoiding unnecessary overhead. This framework allows us to:</p>
-        
-        <div class="benefits-grid">
-            <div class="benefit">
-                <div class="benefit-icon">
-                    <i class="fas fa-balance-scale"></i>
-                </div>
-                <div class="benefit-content">
-                    <h4>Balance Governance with Agility</h4>
-                    <p>Apply appropriate controls based on project impact, risk, and scope without creating unnecessary bureaucracy</p>
-                </div>
-            </div>
-            
-            <div class="benefit">
-                <div class="benefit-icon">
-                    <i class="fas fa-project-diagram"></i>
-                </div>
-                <div class="benefit-content">
-                    <h4>Scale Resource Allocation</h4>
-                    <p>Direct our limited technical resources to where they add the most value while enabling self-service for routine tasks</p>
-                </div>
-            </div>
-            
-            <div class="benefit">
-                <div class="benefit-icon">
-                    <i class="fas fa-sitemap"></i>
-                </div>
-                <div class="benefit-content">
-                    <h4>Create Clear Expectations</h4>
-                    <p>Help business stakeholders understand their involvement requirements for different types of initiatives</p>
-                </div>
-            </div>
-            
-            <div class="benefit">
-                <div class="benefit-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="benefit-content">
-                    <h4>Build Organizational Capability</h4>
-                    <p>Progressively develop data literacy and self-service skills across the organization</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="next-steps">
-            <h4>Recommended Next Steps</h4>
-            <ol>
-                <li>Formalize this project classification framework and obtain executive approval</li>
-                <li>Develop detailed templates for each project type to streamline initiation</li>
-                <li>Create a data project intake process that routes initiatives to the appropriate track</li>
-                <li>Train the DCoE team on the different approaches for each project type</li>
-                <li>Pilot the framework with 1-2 projects of each type to refine the process</li>
-            </ol>
-        </div>
-    </div>
+   
+<div class="navigation-buttons">
+    <a href="Data-Transformation-Playbook-Opearting-Model-SME.html" class="nav-button back-button">
+        <span class="button-icon">←</span> Back to Playbook Home
+    </a>
+</div>
+
+
+
 </section>
 
 <style>
@@ -1091,6 +1040,85 @@
         width: 100%;
         height: 100%;
     }
+  
+/* Navigation buttons styles */
+.navigation-buttons {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.button-icon {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.back-button {
+    background-color: #2c3e50;
+}
+
+.back-button:hover {
+    background-color: #1a252f;
+}  
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .centered-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+  }
+  
+  .image-caption {
+    margin-top: 12px;
+    font-style: italic;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  .image-source {
+    display: block;
+    margin-top: 5px;
+    font-weight: 500;
+  }
+  
+  @media (min-width: 512px) {
+    .image-container {
+      max-width: 80%;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .image-container {
+      max-width: 70%;
+    }
+  }  
+  
 </style>
 
   
