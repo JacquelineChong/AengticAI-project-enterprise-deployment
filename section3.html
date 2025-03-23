@@ -1,0 +1,271 @@
+<section id="implementation-blueprint">
+    <h2>Data Lake Implementation Blueprint</h2>
+    
+    <div class="blueprint-container">
+        <canvas id="blueprintCanvas" width="1200" height="700"></canvas>
+    </div>
+    
+    <div class="diagram-caption">
+        <p><em>Our data lake implementation blueprint outlines the key pillars needed to successfully transform our organization into a data-driven enterprise.</em></p>
+    </div>
+</section>
+
+<style>
+    #implementation-blueprint {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .blueprint-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: white;
+    }
+    
+    .diagram-caption {
+        text-align: center;
+        font-style: italic;
+        margin: 15px 0 30px;
+    }
+    
+    canvas {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<script>
+    window.addEventListener('load', function() {
+        // Get the canvas element and its 2D context
+        const canvas = document.getElementById('blueprintCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas dimensions based on its display size
+        const displayWidth = canvas.clientWidth;
+        const displayHeight = canvas.clientHeight;
+        
+        if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+            canvas.width = displayWidth;
+            canvas.height = displayHeight;
+        }
+        
+        // Colors
+        const colors = {
+            businessBlue: '#4169E1',
+            capabilityBlue: '#3498db',
+            changeGray: '#f0f0f0',
+            white: '#ffffff',
+            text: '#ffffff',
+            darkText: '#333333',
+            background: '#ffffff'  // Background color for padding
+        };
+        
+        // Draw the blueprint diagram
+        function drawBlueprint() {
+            const width = canvas.width;
+            const height = canvas.height;
+            
+            // Fill background with white
+            ctx.fillStyle = colors.background;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Define section heights
+            const businessHeight = height * 0.35;
+            const capabilityHeight = height * 0.45;
+            const changeHeight = height * 0.2;
+            
+            // Define padding between sections
+            const padding = 5;
+            const sideMargin = 40;  // Left margin for vertical labels
+            
+            // Define section widths for capability boxes
+            const capabilityBoxWidth = (width - sideMargin - (padding * 5)) / 4; // 4 boxes with padding
+            
+            // Drawing the top section - Business-led
+            ctx.fillStyle = colors.businessBlue;
+            ctx.fillRect(sideMargin, 0, width - sideMargin, businessHeight - padding);
+            
+            // Left vertical label for top section
+            ctx.save();
+            ctx.translate(20, (businessHeight - padding)/2);
+            ctx.rotate(-Math.PI/2);
+            ctx.font = 'bold 16px Arial';
+            ctx.fillStyle = colors.darkText;
+            ctx.textAlign = 'center';
+            ctx.fillText('ALIGNMENT', 0, 0);
+            ctx.fillText('ON VALUE', 0, 20);
+            ctx.restore();
+            
+            // Header and text for business section
+            ctx.font = 'bold 24px Arial';
+            ctx.fillStyle = colors.text;
+            ctx.fillText('1. Business-led', sideMargin + 40, 40);
+            ctx.fillText('data roadmap', sideMargin + 40, 70);
+            
+            ctx.font = '20px Arial';
+            ctx.fillText('To align the senior leadership team on the transformation', sideMargin + 370, 50);
+            ctx.fillText('vision, value, and roadmap ...', sideMargin + 370, 80);
+            
+            ctx.font = '20px Arial';
+            ctx.fillText('... and reimagining business domains to', sideMargin + 70, 140);
+            ctx.fillText('deliver outstanding customer experiences', sideMargin + 70, 170);
+            ctx.fillText('and lower unit cost', sideMargin + 70, 200);
+            
+            // Draw business domain circles
+            const domainY = 170;
+            const domainRadius = 40;
+            const domains = [
+                {text: 'Menu', subtext: 'Domain', x: sideMargin + 610},
+                {text: '...', x: sideMargin + 710},
+                {text: '...', x: sideMargin + 810},
+                {text: '...', x: sideMargin + 910},
+                {text: 'Customer', subtext: 'Domain', x: sideMargin + 1010}
+            ];
+            
+            domains.forEach(domain => {
+                // Draw circle
+                ctx.beginPath();
+                ctx.arc(domain.x, domainY, domainRadius, 0, Math.PI * 2);
+                ctx.fillStyle = colors.white;
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = colors.businessBlue;
+                ctx.stroke();
+                
+                // Add text
+                ctx.font = 'bold 16px Arial';
+                ctx.fillStyle = colors.darkText;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                if (domain.text === '...') {
+                    ctx.fillText(domain.text, domain.x, domainY);
+                } else {
+                    ctx.fillText(domain.text, domain.x, domainY - 10);
+                    ctx.font = '14px Arial';
+                    ctx.fillText(domain.subtext, domain.x, domainY + 10);
+                }
+            });
+            
+            // Middle section - Capabilities (4 boxes with padding)
+            const capabilityBoxes = [
+                {
+                    title: '2. Talent',
+                    text: 'To ensure you have the right skills and capabilities to execute and innovate'
+                },
+                {
+                    title: '3. Operating model',
+                    text: 'To increase the metabolic rate of the organization by bringing business, operations and technology together'
+                },
+                {
+                    title: '4. Technology',
+                    text: 'To implement the data lake foundation that allows your organization to easily store, process, and access data to accelerate innovation'
+                },
+                {
+                    title: '5. Data Strategy',
+                    text: 'To continuously enrich data and make it easy to consume across the organization to improve customer experiences and business operations'
+                }
+            ];
+            
+            // Left vertical label for middle section
+            ctx.save();
+            ctx.translate(20, businessHeight + capabilityHeight/2);
+            ctx.rotate(-Math.PI/2);
+            ctx.font = 'bold 16px Arial';
+            ctx.fillStyle = colors.darkText;
+            ctx.textAlign = 'center';
+            ctx.fillText('DELIVERY', 0, 0);
+            ctx.fillText('CAPABILITIES', 0, 20);
+            ctx.restore();
+            
+            // Draw individual capability boxes with padding
+            for (let i = 0; i < capabilityBoxes.length; i++) {
+                const x = sideMargin + (i * (capabilityBoxWidth + padding));
+                const y = businessHeight;
+                
+                // Draw box
+                ctx.fillStyle = colors.capabilityBlue;
+                ctx.fillRect(x, y, capabilityBoxWidth, capabilityHeight - padding);
+                
+                // Title
+                ctx.font = 'bold 22px Arial';
+                ctx.fillStyle = colors.text;
+                ctx.textAlign = 'left';
+                ctx.fillText(capabilityBoxes[i].title, x + 20, y + 40);
+                
+                // Text - word wrapping
+                ctx.font = '18px Arial';
+                wrapText(ctx, capabilityBoxes[i].text, x + 20, y + 90, capabilityBoxWidth - 40, 25);
+            }
+            
+            // Bottom section - Change Management
+            ctx.fillStyle = colors.changeGray;
+            ctx.fillRect(sideMargin, businessHeight + capabilityHeight, width - sideMargin, changeHeight);
+            
+            // Left vertical label for bottom section
+            ctx.save();
+            ctx.translate(20, businessHeight + capabilityHeight + changeHeight/2);
+            ctx.rotate(-Math.PI/2);
+            ctx.font = 'bold 16px Arial';
+            ctx.fillStyle = colors.darkText;
+            ctx.textAlign = 'center';
+            ctx.fillText('CHANGE', 0, 0);
+            ctx.fillText('MANAGEMENT', 0, 20);
+            ctx.restore();
+            
+            // Header and text for change management section
+            ctx.font = 'bold 22px Arial';
+            ctx.fillStyle = colors.darkText;
+            ctx.textAlign = 'left';
+            ctx.fillText('6. Adoption and scaling', sideMargin + 40, businessHeight + capabilityHeight + 40);
+            
+            ctx.font = '18px Arial';
+            wrapText(
+                ctx, 
+                'To maximize value capture by ensuring the adoption and enterprise scaling of digital solutions and by tightly managing the transformation progress and risks', 
+                sideMargin + 40, 
+                businessHeight + capabilityHeight + 70, 
+                width - 120, 
+                25
+            );
+        }
+        
+        // Helper function to wrap text
+        function wrapText(context, text, x, y, maxWidth, lineHeight) {
+            const words = text.split(' ');
+            let line = '';
+            
+            for (let n = 0; n < words.length; n++) {
+                const testLine = line + words[n] + ' ';
+                const metrics = context.measureText(testLine);
+                const testWidth = metrics.width;
+                
+                if (testWidth > maxWidth && n > 0) {
+                    context.fillText(line, x, y);
+                    line = words[n] + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
+            }
+            
+            context.fillText(line, x, y);
+        }
+        
+        // Run the drawing
+        drawBlueprint();
+    });
+</script>
