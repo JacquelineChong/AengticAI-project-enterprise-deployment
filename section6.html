@@ -1,5 +1,5 @@
 <section id="data-governance-framework">
-    <h2>Data Governance & Team Structure: Building an Effective Data Organization</h2>
+    <h2>6. Data Center of Excellence ("DCoE"): Building an Effective Data Organization</h2>
     
     <div class="intro-section">
         <p>Creating a sustainable framework for data initiatives requires more than just technical expertise—it demands a thoughtful organizational structure that balances centralized governance with distributed domain expertise. In this section, we'll explore our recommended Data Center of Excellence (DCoE) model and how it collaborates with domain experts through agile delivery methodologies, with embedded risk management throughout the process.</p>
@@ -14,7 +14,7 @@
             <h4>Recommended DCoE Composition</h4>
             
             <div class="dcoe-diagram">
-                <canvas id="dcoeCanvas" width="900" height="500"></canvas>
+                <canvas id="dcoeCanvas" width="1000" height="800"></canvas>
             </div>
             
             <div class="dcoe-table-container">
@@ -28,7 +28,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>DCoE Lead</strong><br>(You, initially)</td>
+                            <td><strong>DCoE Lead</strong><br>(Head of Data Team)</td>
                             <td>
                                 <ul>
                                     <li>Oversee all DCoE functions</li>
@@ -37,7 +37,7 @@
                                     <li>Secure executive sponsorship</li>
                                 </ul>
                             </td>
-                            <td>As the organization's data scientist, you would initially serve as DCoE lead while developing others</td>
+                            <td>As the organization's lead data scientist, Head of Data Team would initially serve as DCoE lead while developing others</td>
                         </tr>
                         <tr>
                             <td><strong>Data Architect</strong></td>
@@ -49,7 +49,7 @@
                                     <li>Ensure scalability</li>
                                 </ul>
                             </td>
-                            <td>Could initially be sourced from your external vendor as a part-time role or consultant</td>
+                            <td>Could initially be sourced from external vendor as a part-time role or consultant</td>
                         </tr>
                         <tr>
                             <td><strong>Data Governance Lead</strong></td>
@@ -61,19 +61,19 @@
                                     <li>Maintain data dictionary</li>
                                 </ul>
                             </td>
-                            <td>Could be staffed by your business analyst initially with guidance from you</td>
+                            <td>Could be staffed by a business analyst initially with guidance from DCoE Lead</td>
                         </tr>
                         <tr>
-                            <td><strong>Business Value Manager</strong></td>
+                            <td><strong>Data Champions</strong></td>
                             <td>
                                 <ul>
                                     <li>Identify business use cases</li>
-                                    <li>Calculate ROI/business cases</li>
+                                    <li>Calculate ROI/business value</li>
                                     <li>Measure value realization</li>
                                     <li>Facilitate business partnership</li>
                                 </ul>
                             </td>
-                            <td>This could be a respected business leader seconded to the DCoE part-time</td>
+                            <td>This could be digital-saavy representatives nominated by head of department of respective business domain</td>
                         </tr>
                         <tr>
                             <td><strong>Technical Implementation Lead</strong></td>
@@ -85,7 +85,7 @@
                                     <li>Ensure technical standards</li>
                                 </ul>
                             </td>
-                            <td>Initially could be your IT Manager with expanded responsibilities</td>
+                            <td>Initially could be IT Manager with expanded responsibilities</td>
                         </tr>
                         <tr>
                             <td><strong>Rotating Business Domain Representatives</strong></td>
@@ -94,10 +94,9 @@
                                     <li>Represent departmental needs</li>
                                     <li>Identify use cases</li>
                                     <li>Validate data requirements</li>
-                                    <li>Champion adoption</li>
                                 </ul>
                             </td>
-                            <td>Your identified "Data Champions" would rotate through this role based on active projects</td>
+                            <td>Business Domain Representatives would rotate through this role based on active projects</td>
                         </tr>
                     </tbody>
                 </table>
@@ -113,7 +112,7 @@
                     <ul>
                         <li>Establish minimal structure with part-time roles</li>
                         <li>Define core data principles and governance standards</li>
-                        <li>Complete first project (Integrated Inventory Management)</li>
+                        <li>Complete first project</li>
                         <li>Build credibility through quick wins</li>
                     </ul>
                 </div>
@@ -141,144 +140,17 @@
         </div>
     </div>
     
-    <div class="agile-pod-section">
-        <h3>Agile Data Delivery Model</h3>
-        
-        <p>For efficient execution of data projects, we recommend adopting an agile pod structure as illustrated below. Each pod contains the essential skills needed to deliver complete data products while maintaining connections to the DCoE for governance and standards.</p>
-        
-        <div class="pod-structure">
-            <canvas id="podCanvas" width="900" height="500"></canvas>
-        </div>
-        
-        <div class="pod-roles">
-            <div class="pod-role">
-                <h5>Data Product Owner (DPO)</h5>
-                <p>Leads pod in development of data product, sets vision and priorities, and manages stakeholder relationships</p>
-            </div>
-            
-            <div class="pod-role">
-                <h5>Data Steward(s) (DS)</h5>
-                <p>Manages the relevant data domains, ensures data quality and compliance with governance policies</p>
-            </div>
-            
-            <div class="pod-role">
-                <h5>Data Product Analyst(s) (DPA)</h5>
-                <p>Brings voice of users/customers, helps define requirements and validates outcomes</p>
-            </div>
-            
-            <div class="pod-role">
-                <h5>Data Engineer(s) (DE)</h5>
-                <p>Carries out data engineering work, builds pipelines and ensures data processing reliability</p>
-            </div>
-            
-            <div class="pod-role">
-                <h5>Data Architect (DA)</h5>
-                <p>Designs the overall data architecture for the product, aligns with enterprise standards</p>
-            </div>
-            
-            <div class="pod-role">
-                <h5>Designer (D)</h5>
-                <p>Creates an easy to consume experience for users, designs interfaces and visualizations</p>
-            </div>
-            
-            <div class="pod-role">
-                <h5>Tech Delivery (TD)</h5>
-                <p>Provides infrastructure and DataOps expertise, ensures technical quality</p>
-            </div>
-        </div>
-    </div>
     
-    <div class="risk-management-section">
-        <h3>Embedded Risk Management Framework</h3>
-        
-        <p>Data initiatives often involve sensitive information and compliance requirements. Our approach embeds risk management directly into the agile delivery process, ensuring that data governance and security are not afterthoughts but integrated throughout the development lifecycle.</p>
-        
-        <div class="risk-model">
-            <canvas id="riskCanvas" width="1000" height="600"></canvas>
-        </div>
-        
-        <div class="risk-process">
-            <h4>Risk Assessment Process in Data Development</h4>
-            
-            <div class="risk-stages">
-                <div class="risk-stage">
-                    <div class="risk-number">1</div>
-                    <div class="risk-details">
-                        <h5>Risk Identification</h5>
-                        <p>Risk assessment based on comprehensive risk taxonomy to identify risks at a granular level</p>
-                        <p class="timing">Every quarter (if needed)</p>
-                    </div>
-                </div>
-                
-                <div class="risk-stage">
-                    <div class="risk-number">2</div>
-                    <div class="risk-details">
-                        <h5>Risk Professionals Assignment</h5>
-                        <p>Risk professionals are assigned to co-design/consult risk-mitigating actions</p>
-                    </div>
-                </div>
-                
-                <div class="risk-stage">
-                    <div class="risk-number">3</div>
-                    <div class="risk-details">
-                        <h5>Refined Risk Assessment</h5>
-                        <p>Risk assessment can be retaken to update risk identification and rating as more clarity is obtained</p>
-                        <p class="timing">During sprint</p>
-                    </div>
-                </div>
-                
-                <div class="risk-stage">
-                    <div class="risk-number">4</div>
-                    <div class="risk-details">
-                        <h5>Risk Mitigation Workflow</h5>
-                        <p>Risk mitigation stories identified and automatically generated into backlog of the pod</p>
-                    </div>
-                </div>
-                
-                <div class="risk-stage">
-                    <div class="risk-number">5</div>
-                    <div class="risk-details">
-                        <h5>Mitigation Executed</h5>
-                        <p>Stories assigned to pod members, business or risk professionals to execute mitigation</p>
-                    </div>
-                </div>
-                
-                <div class="risk-stage">
-                    <div class="risk-number">7</div>
-                    <div class="risk-details">
-                        <h5>Reporting and Compliance</h5>
-                        <p>Risk mitigation actions documented for compliance, and sprint retrospective discussion</p>
-                        <p class="timing">Post-sprint</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="risk-monitoring">
-                <div class="monitoring-section">
-                    <h5>Initial Assessment</h5>
-                    <p>Automatic triggers for involving specialized control functions</p>
-                </div>
-                
-                <div class="monitoring-section">
-                    <h5>Dashboard</h5>
-                    <p>Monitoring of risk levels and mitigation throughout the life cycle</p>
-                </div>
-                
-                <div class="monitoring-section">
-                    <h5>Compliance Reports</h5>
-                    <p>Automatically generated and configurable reports</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+   
     
     <div class="project-plan-section">
-        <h3>Integrated Inventory Management: Project Timeline with DCoE Involvement</h3>
+        <h3>Example - Integrated Inventory Management: Project Timeline with DCoE Involvement</h3>
         
-        <p>The following timeline demonstrates how our DCoE structure works in practice on the Integrated Inventory Management project, showing when different domain experts are pulled in and how responsibilities shift across project phases.</p>
+        <p>The following timeline demonstrates how a DCoE structure works in practice on the Integrated Inventory Management project, showing when different domain experts are pulled in and how responsibilities shift across project phases.</p>
         
         <div class="timeline-container">
-            <canvas id="timelineCanvas" width="1100" height="700"></canvas>
+            <canvas id="timelineCanvas" width="1300" height="900"></canvas>
         </div>
         
         <div class="phase-details">
@@ -323,10 +195,10 @@
                                 </tr>
                                 <tr>
                                     <td>Business case refinement</td>
-                                    <td>Business Value Manager leads</td>
+                                    <td>Data Champions lead</td>
                                     <td>Operations Director<br>Finance Manager</td>
                                     <td>Detailed business case<br>ROI calculations<br>Value tracking plan</td>
-                                    <td><strong>Business Value Manager</strong></td>
+                                    <td><strong>Data Champions </strong></td>
                                 </tr>
                                 <tr>
                                     <td>Stakeholder kickoff</td>
@@ -426,14 +298,14 @@
                                     <td>DCoE Lead develops</td>
                                     <td>Restaurant Managers<br>Menu Planner</td>
                                     <td>Predictive model<br>Forecast dashboards<br>Validation process</td>
-                                    <td><strong>DCoE Lead (You)</strong></td>
+                                    <td><strong>DCoE Lead</strong></td>
                                 </tr>
                                 <tr>
                                     <td>Inventory optimization models</td>
                                     <td>DCoE Lead develops<br>Business Value validates</td>
                                     <td>Inventory Controller<br>Purchasing Specialist</td>
                                     <td>Optimization algorithms<br>Scenario models<br>Business rules</td>
-                                    <td><strong>DCoE Lead (You)</strong></td>
+                                    <td><strong>DCoE Lead</strong></td>
                                 </tr>
                                 <tr>
                                     <td>Reporting dashboards</td>
@@ -501,10 +373,10 @@
                                 </tr>
                                 <tr>
                                     <td>Value realization tracking</td>
-                                    <td>Business Value Manager leads</td>
+                                    <td>Data Champions</td>
                                     <td>Operations Director<br>Finance Manager</td>
                                     <td>Value tracking dashboard<br>ROI validation<br>Benefits realization report</td>
-                                    <td><strong>Business Value Manager</strong></td>
+                                    <td><strong>Data Champions</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -540,7 +412,7 @@
                                     <td>DCoE Lead implements<br>Data Architect reviews</td>
                                     <td>Data champions<br>End users</td>
                                     <td>Model improvements<br>Accuracy metrics<br>Version control</td>
-                                    <td><strong>DCoE Lead (You)</strong></td>
+                                    <td><strong>DCoE Lead</strong></td>
                                 </tr>
                                 <tr>
                                     <td>Knowledge sharing</td>
@@ -596,7 +468,7 @@
                 <div class="factor-icon">4</div>
                 <div class="factor-content">
                     <h4>Scalable Framework</h4>
-                    <p>Design the DCoE to grow with your data maturity, starting lean but with a vision for expansion</p>
+                    <p>Design the DCoE to grow with data maturity, starting lean but with a vision for expansion</p>
                 </div>
             </div>
             
@@ -625,6 +497,14 @@
             </div>
         </div>
     </div>
+<div class="navigation-buttons">
+    <a href="Data-Transformation-Playbook-Opearting-Model-SME.html" class="nav-button back-button">
+        <span class="button-icon">←</span> Back to Playbook Home
+    </a>
+</div>
+
+
+ 
 </section>
 
 <style>
@@ -938,6 +818,43 @@
             grid-template-columns: 1fr;
         }
     }
+  
+/* Navigation buttons styles */
+.navigation-buttons {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.button-icon {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.back-button {
+    background-color: #2c3e50;
+}
+
+.back-button:hover {
+    background-color: #1a252f;
+}
 </style>
 
 <script>
@@ -985,7 +902,7 @@
                 // Center circle - DCoE Lead
                 const centerX = dcoeCanvas.width / 2;
                 const centerY = dcoeCanvas.height / 2;
-                const mainRadius = 80;
+                const mainRadius = 100;
                 
                 dcoeCtx.beginPath();
                 dcoeCtx.arc(centerX, centerY, mainRadius, 0, Math.PI * 2);
@@ -997,20 +914,20 @@
                 dcoeCtx.textAlign = "center";
                 dcoeCtx.fillText("DCoE Lead", centerX, centerY - 10);
                 dcoeCtx.font = "14px Arial";
-                dcoeCtx.fillText("(You)", centerX, centerY + 15);
+                dcoeCtx.fillText("(Head of Data Team)", centerX, centerY + 15);
                 
                 // Surrounding roles
                 const roles = [
                     { title: "Data Architect", description: "Data models & integration patterns", angle: 0 },
                     { title: "Data Governance", description: "Policies & standards", angle: Math.PI / 3 },
-                    { title: "Business Value", description: "ROI & use cases", angle: 2 * Math.PI / 3 },
+                    { title: "Data Champion", description: "Business Value, ROI & use cases", angle: 2 * Math.PI / 3 },
                     { title: "Technical Lead", description: "Implementation & vendor mgmt", angle: Math.PI },
                     { title: "Business Domain", description: "Rotating representatives", angle: 4 * Math.PI / 3 },
                     { title: "Skills Development", description: "Training & capability building", angle: 5 * Math.PI / 3 }
                 ];
                 
-                const outerRadius = 60;
-                const distance = 180;
+                const outerRadius = 70;
+                const distance = 200;
                 
                 roles.forEach(role => {
                     const x = centerX + Math.cos(role.angle) * distance;
@@ -1570,8 +1487,8 @@
                 // Timeline dimensions
                 const margin = 100;
                 const timelineWidth = timelineCanvas.width - (margin * 2);
-                const timelineHeight = 60;
-                const timelineY = 120;
+                const timelineHeight = 70;
+                const timelineY = 150;
                 
                 // Draw timeline base
                 timelineCtx.fillStyle = "#e0e0e0";
@@ -1598,7 +1515,7 @@
                         }
                     } else {
                         // Last phase (ongoing) gets less space
-                        phaseWidth = timelineWidth * 0.15;
+                        phaseWidth = timelineWidth * 0.2;
                     }
                     
                     // Draw phase segment
