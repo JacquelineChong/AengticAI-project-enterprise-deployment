@@ -1,12 +1,12 @@
 <section id="vision-roadmap">
-    <h2>Data Lake: The Foundation of Our Strategic Data Transformation</h2>
+    <h2>2. Data Lake: The Foundation of Strategic Data Transformation</h2>
     
     <div class="vision-statement">
-        <p>The data lake is not just a technological upgrade—it's the cornerstone that enables our entire strategic data transformation. By centralizing our data and fostering collaboration between departments, we create the foundation upon which all our data-driven initiatives can be built. This comprehensive approach allows us to move from isolated information silos to an integrated ecosystem where data flows freely, insights are generated continuously, and value is created exponentially.</p>
+        <p>The data lake is not just a technological upgrade—it's the cornerstone that enables the entire strategic data transformation. By centralizing data and fostering collaboration between departments, we create the foundation upon which all our data-driven initiatives can be built. This comprehensive approach allows us to move from isolated information silos to an integrated ecosystem where data flows freely, insights are generated continuously, and value is created exponentially.</p>
     </div>
     
     <div class="key-concept">
-        <h3>Why Our Data Lake is the Cornerstone of Transformation</h3>
+        <h3>Why Data Lake is the Cornerstone of Transformation</h3>
         <p>The data lake serves as the foundation for our transformation because it:</p>
         <ul>
             <li><strong>Consolidates disparate data sources</strong> across all restaurant locations, supply chain, customer interactions, and market trends</li>
@@ -18,21 +18,27 @@
     </div>
     
  <div class="strategic-roadmap">
-    <h3>Strategic Roadmap for Our Data Transformation</h3>
-    <p>This three-phase roadmap outlines how we'll build our data capabilities over time, with the data lake as the central enabler of our strategic initiatives.</p>
+    <h3>What a Good Strategic Roadmap Looks Like</h3>
+    <p>There are five markers of a good digital and AI transformation roadmap:</p>
+   <li>Domains and the underlying digital solutions are sequenced in a way that will produce meaningful value in the short and medium terms.</li>
+   <li>Domain transformations are explicitly tied to improvements in operational KPIs, which in turn tie to value creation. Business leaders are committed to the domain roadmap and the expected benefits have been baked into their business objectives and incentive plan.</li>
+    <li>The overall plan explicitly accounts for the buildout of enterprise capabilities – talent, operating model, technology, and data – and includes the investments required and the time needed to achieve maturity.</li>
+<li>The overall financial plan is clear and reflects a realistic but aggressive time and investment horizon. It is essential to have financial metrics just as rigorous as if it were a typical cost or revenue transformation, and that progress can be measured in months, not years.</li>
+<li>Change management for the entire transformation and for specific solutions is incorporated. The Transformation Office has developed a change management program and a clear governance model, and it has articulated measurable quarterly milestones.</li>
+
     
     <div class="diagram-container">
         <canvas id="roadmapCanvas" width="1000" height="900"></canvas>
     </div>
     
     <div class="diagram-caption">
-        <p><em>Our strategic roadmap shows how the data lake enables progressively more sophisticated data capabilities and business value over time.</em></p>
+        <p><em>Strategic roadmap shows how the data lake enables progressively more sophisticated data capabilities and business value over time.</em></p>
     </div>
 </div>
     
     <div class="data-lake-connection">
-        <h3>How the Data Lake Makes This Roadmap Possible</h3>
-        <p>Without a unified data foundation, the strategic initiatives in our roadmap would be disconnected, inefficient, and limited in scope. The data lake enables our roadmap by:</p>
+        <h3>How the Data Lake Makes Strategic Roadmap Possible</h3>
+        <p>Without a unified data foundation, the strategic initiatives in the roadmap would be disconnected, inefficient, and limited in scope. The data lake enables the roadmap by:</p>
         
         <div class="connection-grid">
             <div class="connection-item">
@@ -42,20 +48,27 @@
             
             <div class="connection-item">
                 <h4>Supporting Progressive Capability Building</h4>
-                <p>Our foundational capabilities (talent, architecture, operating model) all rely on having a central data repository. The data lake provides the platform where these capabilities can be developed incrementally and in coordination with each other.</p>
+                <p>Foundational capabilities (talent, architecture, operating model) all rely on having a central data repository. The data lake provides the platform where these capabilities can be developed incrementally and in coordination with each other.</p>
             </div>
             
             <div class="connection-item">
                 <h4>Facilitating Scaling and Replication</h4>
-                <p>Once we develop successful data products for one domain (like customer analytics), the data lake makes it easier to replicate and scale these approaches to other domains (like staff performance or supply chain optimization), accelerating our transformation timeline.</p>
+                <p>Once we develop successful data products for one domain (like customer analytics), the data lake makes it easier to replicate and scale these approaches to other domains (like staff performance or supply chain optimization), accelerating data transformation timeline.</p>
             </div>
             
             <div class="connection-item">
                 <h4>Reducing Technical Debt</h4>
-                <p>By building our data capabilities on a unified platform from the start, we avoid creating multiple disconnected systems that would eventually require costly integration or replacement. This allows us to invest more in value-generating initiatives rather than maintenance.</p>
+                <p>By building data capabilities on a unified platform from the start, we avoid creating multiple disconnected systems that would eventually require costly integration or replacement. This allows us to invest more in value-generating initiatives rather than maintenance.</p>
             </div>
         </div>
     </div>
+
+  <div class="navigation-buttons">
+    <a href="Data-Transformation-Playbook-Opearting-Model-SME.html" class="nav-button back-button">
+        <span class="button-icon">←</span> Back to Playbook Home
+    </a>
+</div>  
+  
 </section>
 
 <style>
@@ -158,6 +171,43 @@
         max-width: 100%;
         height: auto;
     }
+/* Navigation buttons styles */
+.navigation-buttons {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.button-icon {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.back-button {
+    background-color: #2c3e50;
+}
+
+.back-button:hover {
+    background-color: #1a252f;
+}
+
 </style>
 
 <script>
@@ -261,9 +311,9 @@
         function drawPhaseHeaders() {
             // Phase background rectangles
             const phases = [
-                { name: "PHASE 1", description: "Develop data foundation – 2023", width: 2 },
-                { name: "PHASE 2", description: "Transform key domains and build data capabilities – 2024", width: 4 },
-                { name: "PHASE 3", description: "Scale impact – 2025", width: 2 }
+                { name: "PHASE 1", description: "Develop data foundation", width: 2 },
+                { name: "PHASE 2", description: "Transform key domains and build data capabilities", width: 4 },
+                { name: "PHASE 3", description: "Scale impact", width: 2 }
             ];
             
             let xOffset = leftColumnWidth;
@@ -414,7 +464,9 @@
             });
         }
         
-        // Draw legend
+
+      
+      // Draw legend
         function drawLegend() {
             const legendX = leftColumnWidth + 20;
             const legendY = 130;
@@ -428,7 +480,9 @@
             ctx.strokeStyle = "#999";
             ctx.lineWidth = 1;
             ctx.strokeRect(legendX, legendY, legendWidth, legendHeight);
-            
+ 
+    
+          
             // Legend items
             const legendItems = [
                 { color: colors.discoveryPhase, label: "Discovery" },
@@ -459,11 +513,11 @@
             ctx.font = 'bold 20px Arial';
             ctx.fillStyle = colors.text;
             ctx.textAlign = 'left';
-            ctx.fillText("Strategic roadmap for data transformation", 0, 30);
+            ctx.fillText("Strategic Roadmap", 0, 30);
             
             ctx.font = fonts.normal;
             ctx.fillStyle = colors.text;
-            ctx.fillText("For Hong Kong's largest cha chaan teng chain", 0, 50);
+            ctx.fillText("For a F&B Chain", 0, 50);
         }
         
         // Main drawing function
@@ -525,7 +579,8 @@
             y += rowHeight;
             
             // Domain: Customer Experience
-            y = 340 + rowHeight;
+          y = 340 + rowHeight;
+                      y += 10;
             ctx.font = fonts.subheader;
             ctx.fillStyle = colors.text;
             ctx.textAlign = 'left';
