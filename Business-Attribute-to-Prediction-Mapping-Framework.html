@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Attribute to Prediction Mapping Framework</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .mapping-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #f9f9f9;
+        }
+        .attribute-group {
+            margin-bottom: 25px;
+        }
+        .prediction-category {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        .priority {
+            font-weight: bold;
+            padding: 3px 6px;
+            border-radius: 3px;
+            display: inline-block;
+            min-width: 60px;
+            text-align: center;
+        }
+        .high {
+            background-color: #ffdddd;
+            color: #d63031;
+        }
+        .medium {
+            background-color: #ffeeba;
+            color: #ff9800;
+        }
+        .low {
+            background-color: #c3e6cb;
+            color: #28a745;
+        }
+        .notes {
+            font-style: italic;
+            color: #666;
+        }
+        .example {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #3498db;
+        }
+        .export-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .export-btn:hover {
+            background-color: #45a049;
+        }
+        .documentation {
+            background-color: #e6f7ff;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 4px solid #1890ff;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        .tab.active {
+            background-color: #fff;
+            border-bottom: 1px solid white;
+            position: relative;
+            z-index: 2;
+        }
+        .tab-content {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 0 5px 5px 5px;
+            margin-top: -1px;
+            position: relative;
+            z-index: 1;
+            background-color: white;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Business Attribute to Prediction Mapping Framework</h1>
+    
+    <div class="mapping-container">
+        <h2>How to Use This Framework (For Business Users)</h2>
+        
+        <p>This framework helps you document your business knowledge in a way that directly supports the data science team's feature engineering efforts. For each attribute:</p>
+        
+        <ol>
+            <li><strong>Provide specific examples</strong> from your business domain</li>
+            <li><strong>Share sample data or reports</strong> that show these attributes in context</li>
+            <li><strong>Explain business rules</strong> that might affect how these attributes should be interpreted</li>
+            <li><strong>Document your hypotheses</strong> about which attributes influence which outcomes</li>
+        </ol>
+        
+        <div class="documentation">
+            <h3>Documentation to Prepare</h3>
+            <ol>
+                <li><strong>Data dictionary</strong> - defining each business attribute in plain language</li>
+                <li><strong>Sample reports</strong> - showing how you currently analyze these attributes</li>
+                <li><strong>Business rules document</strong> - explaining special cases, calculations, or constraints</li>
+                <li><strong>Historical examples</strong> - describing past patterns you've observed</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="mapping-container">
+        <h2>Transactional Attributes</h2>
+        
+        <div class="attribute-group">
+            <h3>Purchase Behavior</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Business Attribute</th>
+                        <th>Description</th>
+                        <th>Prediction Endpoint</th>
+                        <th>Expected Relationship</th>
+                        <th>Documentation to Provide</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Average order value</td>
+                        <td>Mean purchase amount over last 6 months</td>
+                        <td>
+                            <ul>
+                                <li>Product tier preferences</li>
+                                <li>Likelihood of premium purchase</li>
+                                <li>Price sensitivity</li>
+                            </ul>
+                        </td>
+                        <td>Higher AOV correlates with luxury product interest and lower price sensitivity</td>
+                        <td>
+                            <ul>
+                                <li><strong>AOV segments</strong> - Your current AOV tiers and what they indicate</li>
+                                <li><strong>AOV reports</strong> - Sample reports showing AOV distribution</li>
+                                <li><strong>AOV calculation rules</strong> - How you handle returns, discounts, etc.</li>
+                                <li><strong>Examples</strong> - Specific cases where AOV predicted premium purchases</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority high">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Purchase frequency</td>
+                        <td>Number of transactions per month</td>
+                        <td>
+                            <ul>
+                                <li>Likelihood of next purchase</li>
+                                <li>Churn prediction</li>
+                                <li>Subscription potential</li>
+                            </ul>
+                        </td>
+                        <td>Regular purchasers show different product interests than occasional buyers</td>
+                        <td>
+                            <ul>
+                                <li><strong>Frequency segments</strong> - How you classify purchase frequency</li>
+                                <li><strong>Purchase interval data</strong> - Sample data showing typical intervals</li>
+                                <li><strong>Seasonal variations</strong> - How seasonality affects frequency</li>
+                                <li><strong>Customer stories</strong> - Examples of how frequency patterns predicted outcomes</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority high">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Days since last purchase</td>
+                        <td>Recency metric</td>
+                        <td>
+                            <ul>
+                                <li>Churn risk</li>
+                                <li>Campaign response probability</li>
+                            </ul>
+                        </td>
+                        <td>Inverse relationship with purchase likelihood</td>
+                        <td>
+                            <ul>
+                                <li><strong>Recency thresholds</strong> - At what point does recency indicate problems</li>
+                                <li><strong>Customer lifecycle data</strong> - Typical buying cycles</li>
+                                <li><strong>Campaign data</strong> - Previous response rates by recency segment</li>
+                                <li><strong>Product-specific variations</strong> - How recency varies by product type</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority medium">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Basket composition</td>
+                        <td>Types of products typically purchased together</td>
+                        <td>
+                            <ul>
+                                <li>Product recommendations</li>
+                                <li>Cross-sell opportunities</li>
+                                <li>Interest in product categories</li>
+                            </ul>
+                        </td>
+                        <td>Certain product combinations indicate specific interests or needs</td>
+                        <td>
+                            <ul>
+                                <li><strong>Affinity analysis</strong> - Existing basket analysis reports</li>
+                                <li><strong>Product groupings</strong> - How you categorize products</li>
+                                <li><strong>Common combinations</strong> - Known product pairings and what they indicate</li>
+                                <li><strong>Sequential purchases</strong> - Typical product progression paths</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority high">High</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="notes">
+                <p>Note: Transaction data should be segmented by time periods (last 30 days, 90 days, 1 year) to capture both recent behavior and long-term patterns.</p>
+            </div>
+        </div>
+        
+        <div class="attribute-group">
+            <h3>RFM Metrics</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Business Attribute</th>
+                        <th>Description</th>
+                        <th>Prediction Endpoint</th>
+                        <th>Expected Relationship</th>
+                        <th>Documentation to Provide</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RFM Score (combined)</td>
+                        <td>Composite of Recency, Frequency, Monetary value</td>
+                        <td>
+                            <ul>
+                                <li>Customer lifetime value</li>
+                                <li>Campaign response likelihood</li>
+                                <li>Churn risk</li>
+                            </ul>
+                        </td>
+                        <td>Higher RFM scores indicate higher-value customers with specific product affinities</td>
+                        <td>
+                            <ul>
+                                <li><strong>RFM calculation methodology</strong> - How you calculate and weight RFM</li>
+                                <li><strong>RFM score distribution</strong> - Current customer distribution</li>
+                                <li><strong>RFM trends</strong> - How scores typically evolve over time</li>
+                                <li><strong>RFM thresholds</strong> - Score levels that trigger actions</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority high">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>RFM Segment</td>
+                        <td>Customer categorization (e.g., Champions, At Risk, etc.)</td>
+                        <td>
+                            <ul>
+                                <li>Marketing channel preferences</li>
+                                <li>Content type effectiveness</li>
+                                <li>Offer sensitivity</li>
+                            </ul>
+                        </td>
+                        <td>Different segments respond to different marketing approaches</td>
+                        <td>
+                            <ul>
+                                <li><strong>Segment definitions</strong> - Detailed description of each segment</li>
+                                <li><strong>Segment performance data</strong> - How segments respond to campaigns</li>
+                                <li><strong>Segment migration patterns</strong> - How customers move between segments</li>
+                                <li><strong>Segment-specific strategies</strong> - Current approaches by segment</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority medium">Medium</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="mapping-container">
+        <h2>Engagement Attributes</h2>
+        
+        <div class="attribute-group">
+            <h3>Web & App Behavior</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Business Attribute</th>
+                        <th>Description</th>
+                        <th>Prediction Endpoint</th>
+                        <th>Expected Relationship</th>
+                        <th>Documentation to Provide</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product page views</td>
+                        <td>Frequency and duration of product page visits</td>
+                        <td>
+                            <ul>
+                                <li>Product interest</li>
+                                <li>Purchase intent</li>
+                                <li>Category affinity</li>
+                            </ul>
+                        </td>
+                        <td>Multiple views of similar products indicate strong interest in that category</td>
+                        <td>
+                            <ul>
+                                <li><strong>Page view thresholds</strong> - What constitutes significant engagement</li>
+                                <li><strong>View-to-purchase ratios</strong> - Typical conversion patterns</li>
+                                <li><strong>Browse patterns</strong> - Common browsing sequences</li>
+                                <li><strong>Analytics data</strong> - Sample user journey reports</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority high">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Search keywords</td>
+                        <td>Terms used in site/app search</td>
+                        <td>
+                            <ul>
+                                <li>Interest keywords</li>
+                                <li>Content recommendations</li>
+                                <li>Product feature preferences</li>
+                            </ul>
+                        </td>
+                        <td>Search terms directly indicate customer interests and needs</td>
+                        <td>
+                            <ul>
+                                <li><strong>Keyword categorization</strong> - How you group search terms</li>
+                                <li><strong>Top keywords reports</strong> - Most common search terms</li>
+                                <li><strong>Keyword intent mapping</strong> - Terms that indicate specific intents</li>
+                                <li><strong>Search-to-conversion patterns</strong> - Which searches lead to purchases</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority high">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cart abandonment</td>
+                        <td>Products added to cart but not purchased</td>
+                        <td>
+                            <ul>
+                                <li>Price sensitivity</li>
+                                <li>Hesitation points</li>
+                                <li>Remarketing effectiveness</li>
+                            </ul>
+                        </td>
+                        <td>Products frequently abandoned may indicate pricing or value proposition issues</td>
+                        <td>
+                            <ul>
+                                <li><strong>Abandonment rates</strong> - Typical rates by product category</li>
+                                <li><strong>Abandonment analysis</strong> - Known reasons for abandonment</li>
+                                <li><strong>Recovery campaign data</strong> - Effectiveness of recovery efforts</li>
+                                <li><strong>Abandonment stages</strong> - At what point customers typically abandon</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority medium">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Time spent on feature pages</td>
+                        <td>Duration spent reading about specific features</td>
+                        <td>
+                            <ul>
+                                <li>Interest in product benefits</li>
+                                <li>Value proposition alignment</li>
+                            </ul>
+                        </td>
+                        <td>More time on certain feature pages indicates specific benefit interests</td>
+                        <td>
+                            <ul>
+                                <li><strong>Feature page categorization</strong> - How you group feature content</li>
+                                <li><strong>Engagement benchmarks</strong> - What constitutes high engagement</li>
+                                <li><strong>Feature interest to purchase mapping</strong> - Features that drive conversions</li>
+                                <li><strong>User paths</strong> - Common sequences involving feature pages</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority medium">Medium</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="attribute-group">
+            <h3>Communication Response</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Business Attribute</th>
+                        <th>Description</th>
+                        <th>Prediction Endpoint</th>
+                        <th>Expected Relationship</th>
+                        <th>Documentation to Provide</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Email open rate</td>
+                        <td>Percentage of emails opened</td>
+                        <td>
+                            <ul>
+                                <li>Channel preference</li>
+                                <li>Subject line effectiveness</li>
+                                <li>Time-of-day sensitivity</li>
+                            </ul>
+                        </td>
+                        <td>Open patterns reveal interest timing and messaging preferences</td>
+                        <td>
+                            <ul>
+                                <li><strong>Open rate benchmarks</strong> - Typical rates by campaign type</li>
+                                <li><strong>Email engagement segments</strong> - How you categorize email engagement</li>
+                                <li><strong>Time pattern data</strong> - When customers typically engage</li>
+                                <li><strong>Subject line effectiveness data</strong> - What types of messaging work</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority medium">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Content click patterns</td>
+                        <td>Types of content links clicked in communications</td>
+                        <td>
+                            <ul>
+                                <li>Content preferences</li>
+                                <li>Interest keywords</li>
+                                <li>Information seeking behavior</li>
+                            </ul>
+                        </td>
+                        <td>Click patterns reveal specific information needs and interests</td>
+                        <td>
+                            <ul>
+                                <li><strong>Content categorization</strong> - How you classify content types</li>
+                                <li><strong>Click rate data</strong> - Performance by content type</li>
+                                <li><strong>Click sequence patterns</strong> - Common engagement paths</li>
+                                <li><strong>Content effectiveness metrics</strong> - Which content drives conversions</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority high">High</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="mapping-container">
+        <h2>Customer Context Attributes</h2>
+        
+        <div class="attribute-group">
+            <h3>Lifecycle Stage</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Business Attribute</th>
+                        <th>Description</th>
+                        <th>Prediction Endpoint</th>
+                        <th>Expected Relationship</th>
+                        <th>Documentation to Provide</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Customer tenure</td>
+                        <td>Length of customer relationship</td>
+                        <td>
+                            <ul>
+                                <li>Loyalty prediction</li>
+                                <li>Service level expectations</li>
+                                <li>Product upgrade potential</li>
+                            </ul>
+                        </td>
+                        <td>Different tenure customers have different product and benefit interests</td>
+                        <td>
+                            <ul>
+                                <li><strong>Tenure segmentation</strong> - How you classify customer longevity</li>
+                                <li><strong>Tenure milestone data</strong> - Key points in customer lifecycle</li>
+                                <li><strong>Tenure behavior patterns</strong> - How behavior changes over time</li>
+                                <li><strong>Tenure value analysis</strong> - Relationship between tenure and value</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority medium">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Lifecycle stage</td>
+                        <td>Position in customer journey (new, growth, mature, at-risk)</td>
+                        <td>
+                            <ul>
+                                <li>Next best action</li>
+                                <li>Education content needs</li>
+                                <li>Feature adoption likelihood</li>
+                            </ul>
+                        </td>
+                        <td>Stage impacts receptivity to different messaging and offers</td>
+                        <td>
+                            <ul>
+                                <li><strong>Lifecycle definitions</strong> - Detailed description of each stage</li>
+                                <li><strong>Stage transition triggers</strong> - What causes stage changes</li>
+                                <li><strong>Stage-specific metrics</strong> - KPIs for each lifecycle stage</li>
+                                <li><strong>Stage-based strategies</strong> - Current approaches by stage</li>
+                            </ul>
+                        </td>
+                        <td><span class="priority high">High</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="mapping-container">
+        <h2>Sample Documentation Examples</h2>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('tab1')">Data Dictionary Example</div>
+            <div class="tab" onclick="showTab('tab2')">Business Rules Example</div>
+            <div class="tab" onclick="showTab('tab3')">Analysis Example</div>
+        </div>
+        
+        <div id="tab1" class="tab-content active">
+            <h3>Sample Data Dictionary Entry</h3>
+            <div class="example">
+                <p><strong>Attribute:</strong> Premium Product Affinity Score</p>
+                <p><strong>Definition:</strong> A score from 0-100 indicating a customer's likelihood to purchase premium-tier products</p>
+                <p><strong>Calculation:</strong> Based on previous premium purchases (60%), premium product page views (30%), and email engagement with premium content (10%)</p>
+                <p><strong>Data Source:</strong> Combination of transactional database (Orders table) and web analytics platform</p>
+                <p><strong>Update Frequency:</strong> Calculated weekly, every Sunday at midnight</p>
+                <p><strong>Segmentation:</strong></p>
+                <ul>
+                    <li>0-20: Low premium affinity</li>
+                    <li>21-50: Moderate premium affinity</li>
+                    <li>51-80: High premium affinity</li>
+                    <li>81-100: Very high premium affinity</li>
+                </ul>
+                <p><strong>Business Use:</strong> Used to determine eligibility for premium product campaigns and personalized premium recommendations</p>
+            </div>
+        </div>
+        
+        <div id="tab2" class="tab-content">
+            <h3>Sample Business Rules Document</h3>
+            <div class="example">
+                <p><strong>Rule Category:</strong> Purchase Frequency Calculation</p>
+                <p><strong>Rule Description:</strong> Special considerations when calculating purchase frequency</p>
+                <p><strong>Rule Details:</strong></p>
+                <ol>
+                    <li><strong>Subscription orders</strong> are counted as a single purchase per quarter, regardless of delivery frequency</li>
+                    <li><strong>Returns and cancellations</strong> are subtracted from the frequency count</li>
+                    <li><strong>Gift purchases</strong> (identified by different shipping address) are weighted at 0.5 of a normal purchase</li>
+                    <li><strong>Seasonal adjustment:</strong> November-December purchases receive a 0.8 weight in frequency calculations due to holiday gift buying</li>
+                </ol>
+                <p><strong>Business Rationale:</strong> These rules ensure that purchase frequency accurately reflects a customer's true engagement, not just transaction volume.</p>
+                <p><strong>Example:</strong> A customer with 3 subscription deliveries, 2 regular purchases, 1 gift purchase, and 1 return in a quarter would have a calculated frequency of: (3×0.25) + 2 + (1×0.5) - 1 = 2.25</p>
+            </div>
+        </div>
+        
+        <div id="tab3" class="tab-content">
+            <h3>Sample Analysis Example</h3>
+            <div class="example">
+                <p><strong>Analysis Type:</strong> Cart Abandonment Pattern Analysis</p>
+                <p><strong>Key Findings:</strong></p>
+                <ul>
+                    <li>Cart abandonment rate averages 68% across all product categories</li>
+                    <li>Electronics category has highest abandonment (78%) followed by home appliances (72%)</li>
+                    <li>Price point correlation: Items >$100 have 2.3x higher abandonment rate than items <$50</li>
+                    <li>Time pattern: 65% of abandoned carts occur between browsing and payment information entry</li>
+                    <li>When customers return to abandoned carts, 42% complete purchase when offered a 10% discount</li>
+                </ul>
+                <p><strong>Business Hypothesis:</strong> Cart abandonment for high-ticket items indicates price sensitivity and research behavior rather than lack of interest. These customers are comparing prices and features across sites.</p>
+                <p><strong>Observed Patterns:</strong> Customers who abandon carts with electronics items often return within 2-3 days, suggesting comparison shopping. Those who do not return within 5 days rarely convert.</p>
+                <p><strong>Sample Graph:</strong> [Include abandonment rate by product category and price point]</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mapping-container">
+        <h2>Implementation Process</h2>
+        
+        <div class="documentation">
+            <h3>Recommended Workflow for Business Users</h3>
+            <ol>
+                <li><strong>Start with high-priority attributes</strong> - Focus on the attributes marked as high priority first</li>
+                <li><strong>Gather existing documentation</strong> - Collect any reports, analyses, or definitions you already have</li>
+                <li><strong>Schedule knowledge transfer sessions</strong> - Meet with data scientists to explain your domain knowledge</li>
+                <li><strong>Document business hypotheses</strong> - Explicitly state what you believe drives customer behavior</li>
+                <li><strong>Provide real examples</strong> - Share specific customer scenarios that illustrate your points</li>
+                <li><strong>Review feature engineering results</strong> - Examine how your inputs were translated into model features</li>
+            </ol>
+            <p><strong>Tip:</strong> Even incomplete documentation is valuable. Start with what you know best and build from there.</p>
+        </div>
+        
+        <button class="export-btn" onclick="alert('This would export the mapping data in a format your data science team prefers.')">Export Mapping for Data Science Team</button>
+    </div>
+    
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            // Deactivate all tabs
+            var tabs = document.getElementsByClassName("tab");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add("active");
+            
+            // Activate the clicked tab
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
